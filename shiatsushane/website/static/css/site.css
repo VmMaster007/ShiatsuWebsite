@@ -1,0 +1,63 @@
+/* static/css/site.css */
+:root{
+--ink: #26322C; /* dark text */
+--paper: #ffffff; /* base background */
+--sage: #7D9B87; /* green used in screenshot */
+--sage-900:#2A3A33; /* deep green text on sage */
+--sage-700:#5E7E6C; /* hover */
+--deep: #0B1712; /* very dark footer/overlays */
+--muted:#6A736E;
+--radius-pill: 9999px;
+--radius: 18px;
+}
+*{box-sizing:border-box}
+html{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+body{margin:0;color:var(--ink);background:var(--paper)}
+img{max-width:100%;display:block}
+.container{width:min(1200px,92%);margin-inline:auto}
+
+
+/* Topbar */
+.topbar{background:var(--sage);color:var(--sage-900)}
+.topbar-inner{display:flex;gap:1rem;align-items:center;justify-content:space-between;padding:.65rem 0}
+.topbar-left{display:flex;align-items:center;gap:.5rem;font-weight:600}
+.topbar-icon{font-size:1.1rem}
+.topbar-right{display:flex;align-items:center;gap:1rem}
+.topbar .voucher{font-weight:700;text-decoration:none;color:var(--sage-900)}
+.topbar .auth{color:var(--sage-900);text-decoration:none}
+.topbar .divider{opacity:.6}
+
+
+/* Navbar (pill) */
+.navwrap{position:relative;z-index:5;margin-top:12px}
+.navbar{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1rem;background:var(--sage);border-radius:var(--radius-pill);padding:.9rem 1.25rem;box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--sage-900);font-family:'Playfair Display', serif;font-weight:700;font-size:1.35rem}
+.brand-logo{width:48px;height:48px;border-radius:50%;object-fit:cover}
+.brand-name{letter-spacing:.2px}
+.menu{display:flex;justify-content:center;gap:2.25rem;list-style:none;margin:0;padding:0}
+.menu a{font-family:'Playfair Display', serif;font-weight:600;text-decoration:none;color:var(--sage-900);font-size:1.25rem}
+.btn{display:inline-block;border-radius:var(--radius-pill);padding:.7rem 1.1rem;font-weight:800;text-decoration:none}
+.btn.btn-book{background:transparent;border:2px solid var(--sage-900);color:var(--sage-900)}
+.btn.btn-book:hover{background:var(--sage-700);border-color:var(--sage-700);color:#fff}
+.nav-toggle{display:none;background:none;border:0;font-size:1.6rem}
+
+
+/* Hero */
+.hero{position:relative;isolation:isolate}
+.hero-bg{width:100%;height:72vh;object-fit:cover;display:block}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,.35));z-index:1}
+.hero-inner{position:absolute;inset:0;display:grid;place-items:center;text-align:center;z-index:2}
+.hero-badge{width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,.25);display:grid;place-items:center;margin-bottom:1rem;backdrop-filter:blur(2px)}
+.hero-title{font-family:'Playfair Display', serif;color:#2a2928;font-weight:700;font-size:clamp(2rem,4vw,3.2rem);line-height:1.15;max-width:14ch;color:#2B2B29;background-color:rgba(255,255,255,.55);padding:.5rem 1rem;border-radius:14px}
+
+
+/* Responsive */
+@media (max-width: 900px){
+.navbar{grid-template-columns:1fr auto;gap:.5rem}
+.menu{display:none}
+.nav-toggle{display:block;justify-self:end}
+}
+
+
+/* Footer idea placeholder (if needed later) */
+footer{color:#eee;background:var(--deep)}
