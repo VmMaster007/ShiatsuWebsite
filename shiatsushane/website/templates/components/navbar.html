@@ -1,24 +1,27 @@
-<!-- templates/components/navbar.html -->
-<header class="navwrap">
-<div class="container">
-<nav class="navbar" role="navigation" aria-label="Primary">
-<a class="brand" href="/">
-    <img src="{ % static 'static/img/logo.svg % }" alt="Shiatsu Shane logo" class="brand-logo" />
-<span class="brand-name">Shiatsu Shane</span>
-</a>
+{% load static %}
+<html>
+    <!-- templates/components/navbar.html -->
+    <header class="navwrap">
+    <div class="container">
+    <nav class="navbar" role="navigation" aria-label="Primary">
+    <a class="brand" href="/">
+        <img src="../../static/img/logo.svg" alt="Shiatsu Shane logo" class="brand-logo">
+    <span class="brand-name">Shiatsu Shane</span>
+    </a>
 
 
-<button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">☰</button>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">☰</button>
 
 
-<ul id="primary-menu" class="menu">
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-</ul>
+    <ul id="primary-menu" class="menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    </ul>
 
 
-<a class="btn btn-book" href="/book/">Book Now!</a>
-</nav>
-</div>
-</header>
+    <a class="btn btn-book" href="/book/">Book Now!</a>
+    </nav>
+    </div>
+    </header>
+</html>
