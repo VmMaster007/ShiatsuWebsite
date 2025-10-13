@@ -123,6 +123,11 @@
   font-size: 0.9rem;
 }
 
+/* Hide crispy's required asterisk */
+.auth-form .asteriskField { 
+  display: none; 
+}
+
 /* --- Small screen tweaks --- */
 @media (max-width: 850px) {
   .auth-card {
