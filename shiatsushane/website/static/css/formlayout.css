@@ -1,9 +1,12 @@
-/* ===========================
-   Shiatsu Shane Register Page Style
-   =========================== */
+/* =========================================================
+   Shiatsu Shane — Global + Auth + Hero Styles (Bootstrap 5)
+   ========================================================= */
 
-/* --- Brand Colors --- */
+/* -----------------------------
+   0) BRAND PALETTE (variables)
+   ----------------------------- */
 :root {
+  /* Brand colors */
   --sage-green: #5c8160;
   --sage-green-light: #89a88d;
   --sage-green-pale: #dbe4dd;
@@ -11,9 +14,56 @@
   --text-dark: #2d2d2d;
   --text-muted: #6c6c6c;
   --accent: #b5e4c7;
+
+  /* Header sizing used to tuck hero under both bars
+     Tweak these if you still see a thin gap. */
+  --topbar-h: 40px;   /* thin announcement bar */
+  --navbar-h: 96px;   /* rounded main navbar */
+  --header-h: calc(var(--topbar-h) + var(--navbar-h));
 }
 
-/* --- Background Section --- */
+/* -----------------------------
+   1) GLOBAL RESets / small fixes
+   ----------------------------- */
+html, body { /* kill default top/bottom gaps */
+  margin: 0; 
+  background-color: var(--cream-bg);
+  color: var(--text-dark); /* keeps text readable */
+}       
+
+/* global calming tint */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15); /* soft neutral gray tint */
+  pointer-events: none;
+  z-index: 9999; /* sits above background but below content */
+}
+
+/* Ensure header elements always paint above the hero image
+   without changing their size or layout */
+.announcement-bar,
+.topbar,
+.navbar {
+  position: relative;
+  z-index: 1000;
+  margin-top: 0;                /* safety: avoid accidental gaps */
+}
+
+/* Optional: if the announcement bar had a bottom border/line,
+   removing it prevents a white hairline between bars */
+.topbar,
+.announcement-bar {
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+/* =========================================================
+   AUTH / REGISTER (crispy-forms + bootstrap5)
+   ========================================================= */
+
+/* --- Auth wrapper (centered area for forms/cards) --- */
 .auth-page {
   min-height: 100vh;
   display: flex;
@@ -22,7 +72,7 @@
   padding: 3rem 1rem;
 }
 
-/* --- Register Card --- */
+/* --- Card --- */
 .auth-card {
   background: #fff;
   width: min(550px, 100%);
@@ -30,14 +80,13 @@
   padding: 2.5rem 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   border-top: 6px solid var(--sage-green);
-  transition: all 0.3s ease;
+  transition: box-shadow .3s ease;
 }
-
 .auth-card:hover {
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Title Section --- */
+/* --- Headings + divider --- */
 .auth-title {
   text-align: center;
   color: var(--sage-green);
@@ -45,15 +94,12 @@
   margin-bottom: 0.5rem;
   letter-spacing: 0.5px;
 }
-
 .auth-subtitle {
   text-align: center;
   color: var(--text-muted);
   margin-bottom: 1.5rem;
   font-size: 1rem;
 }
-
-/* --- Divider --- */
 .auth-divider {
   height: 2px;
   width: 60px;
@@ -62,25 +108,26 @@
   border-radius: 2px;
 }
 
-/* --- Form Styling --- */
+/* --- Form fields --- */
 .auth-form .form-label {
   font-weight: 600;
   color: var(--text-dark);
 }
-
 .auth-form .form-control {
   border-radius: 10px;
   border: 1px solid #cfd7cf;
   padding: 0.75rem;
-  transition: all 0.3s ease;
+  transition: border-color .3s ease, box-shadow .3s ease;
 }
-
 .auth-form .form-control:focus {
   border-color: var(--sage-green);
   box-shadow: 0 0 0 0.2rem rgba(92, 129, 96, 0.25);
 }
 
-/* --- Button --- */
+/* Hide crispy’s required asterisk (visual only; still required) */
+.auth-form .asteriskField { display: none; }
+
+/* --- Primary button --- */
 .btn-primary {
   background-color: var(--sage-green);
   border-color: var(--sage-green);
@@ -89,33 +136,23 @@
   padding: 0.75rem;
   letter-spacing: 0.3px;
   box-shadow: 0 4px 10px rgba(92, 129, 96, 0.25);
-  transition: all 0.3s ease;
+  transition: background-color .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
-
 .btn-primary:hover {
   background-color: var(--sage-green-light);
   border-color: var(--sage-green-light);
   box-shadow: 0 5px 14px rgba(92, 129, 96, 0.3);
 }
 
-/* --- Link Section --- */
+/* --- Links + footnote --- */
 .auth-link {
   color: var(--sage-green);
   font-weight: 600;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color .2s ease;
 }
-
-.auth-link:hover {
-  color: var(--sage-green-light);
-  text-decoration: underline;
-}
-
-.text-center p {
-  color: var(--text-muted);
-}
-
-/* --- Footer Note --- */
+.auth-link:hover { color: var(--sage-green-light); text-decoration: underline; }
+.text-center p { color: var(--text-muted); }
 .auth-footnote {
   margin-top: 1.5rem;
   text-align: center;
@@ -123,21 +160,91 @@
   font-size: 0.9rem;
 }
 
-/* Hide crispy's required asterisk */
-.auth-form .asteriskField { 
-  display: none; 
+/* --- Responsive tweaks for smaller screens --- */
+@media (max-width: 850px) {
+  .auth-card { padding: 1.5rem; width: 100%; }
+  /* NOTE: You had these already; leaving as-is to keep your current layout.
+     If this makes the auth page too tall on mobile, reduce padding-top. */
+  .auth-page { display: block; padding-top: 8rem; font-size: 2rem; }
 }
 
-/* --- Small screen tweaks --- */
-@media (max-width: 850px) {
-  .auth-card {
-    padding: 1.5rem;
-    width: 100%;
-  }
-  .auth-page {
-    display: block;
-    padding-top: 8rem;
-    font-size: 2rem;
+/* =========================================================
+   HERO SECTION — image sits under announcement bar + navbar
+   ========================================================= */
 
+/* Pull the hero up by the combined header height so the image sits
+   *behind* both bars; add equal padding so hero content isn’t hidden. */
+.hero {
+  position: relative;
+  margin-top: calc(-1 * var(--header-h)) !important;  /* move up under header */
+  padding-top: var(--header-h) !important;            /* keep text visible */
+  min-height: 80vh;                                   /* visible hero area */
+  overflow: hidden;                                   /* clip overflow */
+  background: transparent;                            /* no white fallback */
+  background-position: center top;                    /* if using bg-image */
+}
+
+/* Make an <img class="hero-bg"> behave like a cover background.
+   (Use this if your hero uses an <img>; if you switch to CSS background-image,
+   you can keep this anyway—it won’t hurt.) */
+.hero .hero-bg {
+  position: absolute;
+  inset: 0;                 /* top/right/bottom/left: 0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* crop to cover the hero area */
+  display: block;           /* removes baseline gap */
+  z-index: 0;
+}
+
+/* Optional dark gradient overlay for better text contrast on the photo. */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,0));
+  z-index: 1;
+}
+
+/* Ensure hero text/content sits above the image/overlay. */
+.hero-inner { position: relative; z-index: 2; }
+
+/* 3-image collage inside the hero */
+.hero-collage .hero-strip {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0; /* set to 4px if you want small gutters */
+  z-index: 0;
+}
+
+.hero-collage .hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* fills area; crops as needed */
+  display: block;
+}
+
+.hero-title {
+  background: none !important;
+  backdrop-filter: none !important;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Optional: adjust crop to keep subjects nicely framed */
+.hero-collage .hero-left   { object-position: 40% center; }
+.hero-collage .hero-center { object-position: 50% center; }
+.hero-collage .hero-right  { object-position: 60% center; }
+
+/* Mobile behavior: stack images vertically (1 per row) */
+@media (max-width: 640px) {
+  .hero-collage .hero-strip {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 33.34%;
   }
+  .hero-collage .hero-img { object-position: center; }
 }

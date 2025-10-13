@@ -5,16 +5,18 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<section id="home" class="hero">
-<img class="hero-bg" src="{% static 'img/hero.jpg' %}" alt="Shiatsu massage" />
-<div class="hero-overlay"></div>
-<div class="container hero-inner">
-<div class="hero-badge" aria-hidden="true">
-<!-- optional yin/yang badge; replace with your asset if you have one -->
-<span>⚉</span>
-</div>
-<h1 class="hero-title">Release Stress & Restore<br/> Balance With Shiatsu</h1>
-</div>
+<section id="home" class="hero hero-collage">
+  <div class="hero-strip">
+    <img src="{% static 'img/hero1.jpg' %}" alt="Shiatsu treatment 1" class="hero-img hero-left">
+    <img src="{% static 'img/hero2.jpg' %}" alt="Shiatsu treatment 2" class="hero-img hero-center">
+    <img src="{% static 'img/hero3.jpg' %}" alt="Shiatsu treatment 3" class="hero-img hero-right">
+  </div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-inner">
+    <h1 class="hero-title">Release Stress &amp; Restore<br> Balance With Shiatsu</h1>
+  </div>
 </section>
 
 <div class="modal">
