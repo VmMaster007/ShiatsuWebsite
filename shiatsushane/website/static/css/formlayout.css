@@ -16,7 +16,6 @@
 /* --- Background Section --- */
 .auth-page {
   min-height: 100vh;
-  background: var(--cream-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,8 +124,15 @@
 }
 
 /* --- Small screen tweaks --- */
-@media (max-width: 500px) {
+@media (max-width: 850px) {
   .auth-card {
     padding: 1.5rem;
+    width: 100%;
+  }
+  .auth-page {
+    display: block;
+    padding-top: 8rem;
+    font-size: 2rem;
+
   }
 }
