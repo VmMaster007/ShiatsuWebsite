@@ -2,10 +2,7 @@ from django.shortcuts import render
 from .forms import CreateUserForm
 
 def home(request):
-    return render(request, "pages/index.html")
-
-#register a user
-def register(request):
+    print("Loading home page")
     form = CreateUserForm()
 
     if request.method == "POST":
@@ -16,4 +13,4 @@ def register(request):
     
     context = {'form': form}
 
-    return render(request,'pages/register.html', context=context)
+    return render(request, "pages/index.html", context=context)
