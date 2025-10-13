@@ -1,3 +1,4 @@
+{% block content %}
 <div class="topbar">
 <div class="container topbar-inner">
 <div class="topbar-left">
@@ -8,7 +9,8 @@
 <a class="voucher" href="/vouchers/">Give the gift of relaxation — Gift Vouchers available now!</a>
 <a class="auth" href="/login/">Login</a>
 <span class="divider">|</span>
-<a class="auth" href="/register/">Register</a>
+<a class="auth" href="{% url 'register' %}">Register</a>
 </div>
 </div>
 </div>
+{% endblock %}

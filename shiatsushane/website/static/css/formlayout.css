@@ -1,0 +1,132 @@
+/* ===========================
+   Shiatsu Shane Register Page Style
+   =========================== */
+
+/* --- Brand Colors --- */
+:root {
+  --sage-green: #5c8160;
+  --sage-green-light: #89a88d;
+  --sage-green-pale: #dbe4dd;
+  --cream-bg: #f5efe6;
+  --text-dark: #2d2d2d;
+  --text-muted: #6c6c6c;
+  --accent: #b5e4c7;
+}
+
+/* --- Background Section --- */
+.auth-page {
+  min-height: 100vh;
+  background: var(--cream-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+/* --- Register Card --- */
+.auth-card {
+  background: #fff;
+  width: min(550px, 100%);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-top: 6px solid var(--sage-green);
+  transition: all 0.3s ease;
+}
+
+.auth-card:hover {
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Title Section --- */
+.auth-title {
+  text-align: center;
+  color: var(--sage-green);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* --- Divider --- */
+.auth-divider {
+  height: 2px;
+  width: 60px;
+  background-color: var(--sage-green);
+  margin: 0.5rem auto 1.5rem;
+  border-radius: 2px;
+}
+
+/* --- Form Styling --- */
+.auth-form .form-label {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.auth-form .form-control {
+  border-radius: 10px;
+  border: 1px solid #cfd7cf;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.auth-form .form-control:focus {
+  border-color: var(--sage-green);
+  box-shadow: 0 0 0 0.2rem rgba(92, 129, 96, 0.25);
+}
+
+/* --- Button --- */
+.btn-primary {
+  background-color: var(--sage-green);
+  border-color: var(--sage-green);
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.75rem;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 10px rgba(92, 129, 96, 0.25);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--sage-green-light);
+  border-color: var(--sage-green-light);
+  box-shadow: 0 5px 14px rgba(92, 129, 96, 0.3);
+}
+
+/* --- Link Section --- */
+.auth-link {
+  color: var(--sage-green);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.auth-link:hover {
+  color: var(--sage-green-light);
+  text-decoration: underline;
+}
+
+.text-center p {
+  color: var(--text-muted);
+}
+
+/* --- Footer Note --- */
+.auth-footnote {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* --- Small screen tweaks --- */
+@media (max-width: 500px) {
+  .auth-card {
+    padding: 1.5rem;
+  }
+}
