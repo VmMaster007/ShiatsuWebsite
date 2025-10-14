@@ -26,19 +26,18 @@ def register(request):
             obj = User.objects.filter(email=email).exists()  # check if user with that email
             
             if obj == True:
-                logger.info("REGISTER: Email exists")
+                logger.warning("REGISTER: Email exists")
                 messages.error(request, "Email already exists!")
                 display = "blockclass"
             else:
                 form.save()
                 logger.info("REGISTER: Saved form")
-                # messages.success(request, "Account created successfully.")
+                messages.success(request, "Account created successfully.")
                 display = "hideclass"
-                return  form, display# avoids resubmitting on refresh
+                return  form, display
         else:
             logger.info("REGISTER: Form is not valid")
             display = "blockclass"
-            messages.error(request, form.errors)
     return form, display
 
 def home(request):

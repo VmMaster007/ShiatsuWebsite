@@ -61,3 +61,35 @@ ValueError: not enough values to unpack (expected 2, got 1)
 2025-10-14 16:23:12,321 - INFO - REGISTER: Form is not valid
 2025-10-14 16:23:15,702 - INFO - HOME: view loaded
 2025-10-14 16:23:15,702 - INFO - REGISTER: view running
+2025-10-14 16:28:15,168 - INFO - C:\git\ShiatsuWebsite\shiatsushane\website\views.py changed, reloading.
+2025-10-14 16:28:17,912 - INFO - HOME: view loaded
+2025-10-14 16:28:17,913 - INFO - REGISTER: view running
+2025-10-14 16:28:37,756 - INFO - HOME: view loaded
+2025-10-14 16:28:37,757 - INFO - REGISTER: view running
+2025-10-14 16:28:37,757 - INFO - REGISTER: post recieved
+2025-10-14 16:28:37,789 - INFO - REGISTER: Form is not valid
+2025-10-14 16:28:58,058 - INFO - HOME: view loaded
+2025-10-14 16:28:58,058 - INFO - REGISTER: view running
+2025-10-14 16:28:58,058 - INFO - REGISTER: post recieved
+2025-10-14 16:28:58,063 - INFO - REGISTER: form is valid
+2025-10-14 16:28:58,495 - INFO - REGISTER: Saved form
+2025-10-14 16:29:53,931 - INFO - HOME: view loaded
+2025-10-14 16:29:53,931 - INFO - REGISTER: view running
+2025-10-14 16:38:16,353 - INFO - C:\git\ShiatsuWebsite\shiatsushane\website\views.py changed, reloading.
+2025-10-14 16:38:34,578 - INFO - HOME: view loaded
+2025-10-14 16:38:34,580 - INFO - REGISTER: view running
+2025-10-14 16:38:34,580 - INFO - REGISTER: post recieved
+2025-10-14 16:38:34,635 - INFO - REGISTER: form is valid
+2025-10-14 16:38:35,476 - INFO - REGISTER: Saved form
+2025-10-14 16:38:44,494 - INFO - HOME: view loaded
+2025-10-14 16:38:44,495 - INFO - REGISTER: view running
+2025-10-14 16:38:44,495 - INFO - REGISTER: post recieved
+2025-10-14 16:38:44,502 - INFO - REGISTER: Form is not valid
+2025-10-14 16:39:14,580 - INFO - HOME: view loaded
+2025-10-14 16:39:14,581 - INFO - REGISTER: view running
+2025-10-14 16:39:24,728 - INFO - HOME: view loaded
+2025-10-14 16:39:24,728 - INFO - REGISTER: view running
+2025-10-14 16:39:24,728 - INFO - REGISTER: post recieved
+2025-10-14 16:39:24,736 - INFO - REGISTER: Form is not valid
+2025-10-14 16:40:23,046 - INFO - C:\git\ShiatsuWebsite\shiatsushane\website\views.py changed, reloading.
+2025-10-14 16:41:09,466 - INFO - C:\git\ShiatsuWebsite\shiatsushane\website\views.py changed, reloading.
