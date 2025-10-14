@@ -2,7 +2,6 @@
 {% extends 'pages/base.html' %}
 {% load static %}
 {% block title %}Release Stress & Restore Balance With Shiatsu{% endblock %}
-{% load crispy_forms_tags %}
 {% block content %}
 
 <section id="home" class="hero hero-collage">
@@ -18,26 +17,5 @@
     <h1 class="hero-title">Release Stress &amp; Restore<br> Balance With Shiatsu</h1>
   </div>
 </section>
-
-<div class="modal">
-    <div class="pannel">
-        <div class="auth-page">
-            <div class="auth-card">
-                <h2 class="auth-title">Create Your Account</h2>
-                <div class="auth-divider"></div>
-
-                <form method="POST" autocomplete="off" class="auth-form">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button type="submit" class="btn btn-primary w-100 mt-3">Create Account</button>
-                </form>
-
-                <p class="auth-footnote">
-                By continuing you agree to our Terms & Privacy Policy.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
 
 {% endblock %}

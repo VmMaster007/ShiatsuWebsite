@@ -1,4 +1,4 @@
-
+{% load crispy_forms_tags %}
 {% block content %}
 <div class="topbar">
 <div class="container topbar-inner">
@@ -10,11 +10,14 @@
 <a class="voucher" href="/vouchers/">Give the gift of relaxation — Gift Vouchers available now!</a>
 <a class="auth" href="/login/">Login</a>
 <span class="divider">|</span>
+
+
 <a class="auth" href="javascript:void(0)" onclick="show_modal()">Register</a>
 
 </div>
 </div>
 </div>
+
 
 <!-- Modal Function To Show The Popup -->
 <script>

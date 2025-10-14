@@ -71,6 +71,10 @@ img{max-width:100%;display:block}
     top: 0;
 }
 
+.blockclass{
+    display: block;
+}
+
 .pannel{
     margin-left: auto;
     margin-right: auto;
