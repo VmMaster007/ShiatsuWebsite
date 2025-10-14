@@ -1,0 +1,63 @@
+2025-10-14 16:09:34,778 - INFO - C:\git\ShiatsuWebsite\shiatsushane\website\views.py changed, reloading.
+2025-10-14 16:11:58,032 - INFO - C:\git\ShiatsuWebsite\shiatsushane\website\views.py changed, reloading.
+2025-10-14 16:12:28,291 - INFO - HOME: view loaded
+2025-10-14 16:12:28,292 - INFO - REGISTER: view running
+2025-10-14 16:13:07,598 - INFO - HOME: view loaded
+2025-10-14 16:13:07,599 - INFO - REGISTER: view running
+2025-10-14 16:13:07,599 - INFO - REGISTER: post recieved
+2025-10-14 16:13:07,630 - INFO - REGISTER: form is valid
+2025-10-14 16:13:08,027 - INFO - REGISTER: Saved form
+2025-10-14 16:13:08,082 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\git\ShiatsuWebsite\shiatsushane\website\views.py", line 46, in home
+    form, display = register(request)
+    ^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+2025-10-14 16:14:33,117 - INFO - C:\git\ShiatsuWebsite\shiatsushane\website\views.py changed, reloading.
+2025-10-14 16:14:35,475 - INFO - HOME: view loaded
+2025-10-14 16:14:35,476 - INFO - REGISTER: view running
+2025-10-14 16:15:05,757 - INFO - HOME: view loaded
+2025-10-14 16:15:05,758 - INFO - REGISTER: view running
+2025-10-14 16:15:05,758 - INFO - REGISTER: post recieved
+2025-10-14 16:15:05,789 - INFO - REGISTER: form is valid
+2025-10-14 16:15:06,186 - INFO - REGISTER: Saved form
+2025-10-14 16:15:06,239 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\git\ShiatsuWebsite\shiatsushane\website\views.py", line 46, in home
+    form, display = register(request)
+    ^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+2025-10-14 16:19:26,672 - INFO - C:\git\ShiatsuWebsite\shiatsushane\website\views.py changed, reloading.
+2025-10-14 16:20:14,034 - INFO - HOME: view loaded
+2025-10-14 16:20:14,035 - INFO - REGISTER: view running
+2025-10-14 16:20:19,651 - INFO - HOME: view loaded
+2025-10-14 16:20:19,651 - INFO - REGISTER: view running
+2025-10-14 16:20:49,863 - INFO - HOME: view loaded
+2025-10-14 16:20:49,864 - INFO - REGISTER: view running
+2025-10-14 16:20:49,864 - INFO - REGISTER: post recieved
+2025-10-14 16:20:49,895 - INFO - REGISTER: form is valid
+2025-10-14 16:20:50,307 - INFO - REGISTER: Saved form
+2025-10-14 16:22:47,965 - INFO - HOME: view loaded
+2025-10-14 16:22:47,965 - INFO - REGISTER: view running
+2025-10-14 16:22:47,966 - INFO - REGISTER: post recieved
+2025-10-14 16:22:47,971 - INFO - REGISTER: Form is not valid
+2025-10-14 16:22:51,117 - INFO - HOME: view loaded
+2025-10-14 16:22:51,118 - INFO - REGISTER: view running
+2025-10-14 16:22:51,118 - INFO - REGISTER: post recieved
+2025-10-14 16:22:51,122 - INFO - REGISTER: Form is not valid
+2025-10-14 16:22:53,225 - INFO - HOME: view loaded
+2025-10-14 16:22:53,226 - INFO - REGISTER: view running
+2025-10-14 16:23:12,315 - INFO - HOME: view loaded
+2025-10-14 16:23:12,316 - INFO - REGISTER: view running
+2025-10-14 16:23:12,316 - INFO - REGISTER: post recieved
+2025-10-14 16:23:12,321 - INFO - REGISTER: Form is not valid
+2025-10-14 16:23:15,702 - INFO - HOME: view loaded
+2025-10-14 16:23:15,702 - INFO - REGISTER: view running
