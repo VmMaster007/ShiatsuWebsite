@@ -17,8 +17,8 @@
 
   /* Header sizing used to tuck hero under both bars
      Tweak these if you still see a thin gap. */
-  --topbar-h: 40px;   /* thin announcement bar */
-  --navbar-h: 96px;   /* rounded main navbar */
+  --topbar-h: 22px;   /* thin announcement bar */
+  --navbar-h: 70px;   /* rounded main navbar */
   --header-h: calc(var(--topbar-h) + var(--navbar-h));
 }
 
@@ -51,12 +51,38 @@ body::before {
   margin-top: 0;                /* safety: avoid accidental gaps */
 }
 
+.animation-topbar {
+  position: relative;
+  overflow: hidden;           /* hides the text when offscreen */
+  white-space: nowrap;        /* keeps text in one line */
+}
+
+.animation-topbar span {
+  display: inline-block;
+  position: relative;
+  animation: topbarAnimation 6s linear infinite; /* slow + smooth */
+}
+
+/* Keyframes for left-to-right scrolling */
+@keyframes topbarAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
 /* Optional: if the announcement bar had a bottom border/line,
    removing it prevents a white hairline between bars */
 .topbar,
 .announcement-bar {
   border-bottom: 0 !important;
   box-shadow: none !important;
+}
+
+.voucher{
+  padding-right: 10rem;
 }
 
 /* =========================================================
@@ -74,7 +100,7 @@ body::before {
 
 /* --- Card --- */
 .auth-card {
-  background: #fff;
+  background: var(--cream-bg);
   width: min(550px, 100%);
   border-radius: 20px;
   padding: 2.5rem 2rem;
@@ -202,7 +228,7 @@ body::before {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,0));
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0)); /* change if wanting darker overlay */
   z-index: 1;
 }
 
