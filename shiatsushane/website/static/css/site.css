@@ -60,7 +60,7 @@ img{max-width:100%;display:block}
 .menu{display:none}
 .nav-toggle{display:block;justify-self:end}
 }
-
+/* Modal Popup CSS */
 .modal {
     display: none;
     width: 100%;
@@ -88,6 +88,10 @@ img{max-width:100%;display:block}
     text-align: center;
     color: black;
     border-radius: 10px;
+}
+
+.btn-close{
+    display: none;
 }
 
 
