@@ -277,3 +277,204 @@ ValueError: not enough values to unpack (expected 2, got 1)
 2025-10-16 10:11:44,696 - INFO - REGISTER: view running
 2025-10-16 10:11:44,828 - WARNING - Not Found: /favicon.ico
 2025-10-16 10:13:16,767 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-16 10:21:41,542 - INFO - REGISTER: view running
+2025-10-16 10:21:41,892 - INFO - HOME: view loaded
+2025-10-16 10:21:41,893 - INFO - REGISTER: view running
+2025-10-16 10:21:42,260 - INFO - REGISTER: view running
+2025-10-16 10:21:42,612 - INFO - HOME: view loaded
+2025-10-16 10:21:42,612 - INFO - REGISTER: view running
+2025-10-16 10:21:43,732 - INFO - REGISTER: view running
+2025-10-16 10:21:44,932 - INFO - HOME: view loaded
+2025-10-16 10:21:44,932 - INFO - REGISTER: view running
+2025-10-16 10:30:39,886 - INFO - HOME: view loaded
+2025-10-16 10:30:39,887 - INFO - REGISTER: view running
+2025-10-16 10:30:40,047 - WARNING - Not Found: /favicon.ico
+2025-10-16 10:31:17,382 - INFO - REGISTER: view running
+2025-10-16 10:35:19,315 - INFO - HOME: view loaded
+2025-10-16 10:35:19,316 - INFO - REGISTER: view running
+2025-10-16 10:35:19,867 - INFO - REGISTER: view running
+2025-10-16 11:14:51,335 - INFO - REGISTER: view running
+2025-10-16 11:23:29,455 - INFO - HOME: view loaded
+2025-10-16 11:23:29,455 - INFO - REGISTER: view running
+2025-10-16 11:23:44,301 - INFO - HOME: view loaded
+2025-10-16 11:23:44,302 - INFO - REGISTER: view running
+2025-10-16 11:23:44,302 - INFO - REGISTER: post recieved
+2025-10-16 11:23:44,305 - INFO - REGISTER: Form is not valid
+2025-10-16 11:23:53,233 - INFO - HOME: view loaded
+2025-10-16 11:23:53,234 - INFO - REGISTER: view running
+2025-10-16 11:23:53,234 - INFO - REGISTER: post recieved
+2025-10-16 11:23:53,237 - INFO - REGISTER: form is valid
+2025-10-16 11:23:53,238 - WARNING - REGISTER: Email exists
+2025-10-16 11:24:07,903 - INFO - HOME: view loaded
+2025-10-16 11:24:07,904 - INFO - REGISTER: view running
+2025-10-16 11:24:07,904 - INFO - REGISTER: post recieved
+2025-10-16 11:24:07,908 - INFO - REGISTER: form is valid
+2025-10-16 11:24:08,053 - INFO - REGISTER: Saved form
+2025-10-16 11:32:32,125 - INFO - HOME: view loaded
+2025-10-16 11:32:32,125 - INFO - REGISTER: view running
+2025-10-16 11:32:32,125 - INFO - REGISTER: post recieved
+2025-10-16 11:32:32,129 - INFO - REGISTER: Form is not valid
+2025-10-16 11:32:32,234 - WARNING - Not Found: /favicon.ico
+2025-10-16 11:32:37,523 - INFO - HOME: view loaded
+2025-10-16 11:32:37,523 - INFO - REGISTER: view running
+2025-10-16 11:32:37,523 - INFO - REGISTER: post recieved
+2025-10-16 11:32:37,527 - INFO - REGISTER: Form is not valid
+2025-10-16 11:32:39,170 - INFO - HOME: view loaded
+2025-10-16 11:32:39,171 - INFO - REGISTER: view running
+2025-10-16 11:32:39,171 - INFO - REGISTER: post recieved
+2025-10-16 11:32:39,174 - INFO - REGISTER: Form is not valid
+2025-10-16 11:32:49,369 - INFO - HOME: view loaded
+2025-10-16 11:32:49,369 - INFO - REGISTER: view running
+2025-10-16 11:32:49,369 - INFO - REGISTER: post recieved
+2025-10-16 11:32:49,373 - INFO - REGISTER: form is valid
+2025-10-16 11:32:49,512 - INFO - REGISTER: Saved form
+2025-10-16 11:32:56,007 - INFO - HOME: view loaded
+2025-10-16 11:32:56,008 - INFO - REGISTER: view running
+2025-10-16 11:32:56,008 - INFO - REGISTER: post recieved
+2025-10-16 11:32:56,011 - INFO - REGISTER: Form is not valid
+2025-10-16 11:33:45,366 - INFO - HOME: view loaded
+2025-10-16 11:33:45,366 - INFO - REGISTER: view running
+2025-10-16 11:33:45,366 - INFO - REGISTER: post recieved
+2025-10-16 11:33:45,369 - INFO - REGISTER: Form is not valid
+2025-10-16 11:33:47,670 - INFO - HOME: view loaded
+2025-10-16 11:33:47,670 - INFO - REGISTER: view running
+2025-10-16 11:33:47,670 - INFO - REGISTER: post recieved
+2025-10-16 11:33:47,674 - INFO - REGISTER: Form is not valid
+2025-10-16 11:33:47,751 - WARNING - Not Found: /favicon.ico
+2025-10-16 11:34:03,000 - INFO - HOME: view loaded
+2025-10-16 11:34:03,000 - INFO - REGISTER: view running
+2025-10-16 11:34:03,000 - INFO - REGISTER: post recieved
+2025-10-16 11:34:03,004 - INFO - REGISTER: Form is not valid
+2025-10-16 11:34:12,727 - INFO - HOME: view loaded
+2025-10-16 11:34:12,727 - INFO - REGISTER: view running
+2025-10-16 11:34:12,727 - INFO - REGISTER: post recieved
+2025-10-16 11:34:12,731 - INFO - REGISTER: form is valid
+2025-10-16 11:34:12,896 - INFO - REGISTER: Saved form
+2025-10-16 11:34:19,437 - INFO - HOME: view loaded
+2025-10-16 11:34:19,437 - INFO - REGISTER: view running
+2025-10-16 11:34:19,437 - INFO - REGISTER: post recieved
+2025-10-16 11:34:19,440 - INFO - REGISTER: Form is not valid
+2025-10-16 11:39:14,373 - INFO - HOME: view loaded
+2025-10-16 11:39:14,374 - INFO - REGISTER: view running
+2025-10-16 11:39:14,374 - INFO - REGISTER: post recieved
+2025-10-16 11:39:14,377 - INFO - REGISTER: Form is not valid
+2025-10-16 11:39:14,456 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\160245594\Documents\GitHub\ShiatsuWebsite\shiatsushane\website\views.py", line 51, in home
+    return render(request, "pages/index.html", context=context)
+  File "C:\Python\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "C:\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Python\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+2025-10-16 11:39:14,574 - WARNING - Not Found: /favicon.ico
+2025-10-16 11:39:40,293 - INFO - HOME: view loaded
+2025-10-16 11:39:40,293 - INFO - REGISTER: view running
+2025-10-16 11:39:40,293 - INFO - REGISTER: post recieved
+2025-10-16 11:39:40,296 - INFO - REGISTER: Form is not valid
+2025-10-16 11:39:40,414 - WARNING - Not Found: /favicon.ico
+2025-10-16 11:39:45,837 - INFO - HOME: view loaded
+2025-10-16 11:39:45,837 - INFO - REGISTER: view running
+2025-10-16 11:39:45,837 - INFO - REGISTER: post recieved
+2025-10-16 11:39:45,841 - INFO - REGISTER: Form is not valid
+2025-10-16 11:39:56,678 - INFO - HOME: view loaded
+2025-10-16 11:39:56,678 - INFO - REGISTER: view running
+2025-10-16 11:39:56,678 - INFO - REGISTER: post recieved
+2025-10-16 11:39:56,681 - INFO - REGISTER: form is valid
+2025-10-16 11:39:56,823 - INFO - REGISTER: Saved form
+2025-10-16 11:42:21,379 - INFO - HOME: view loaded
+2025-10-16 11:42:21,379 - INFO - REGISTER: view running
+2025-10-16 11:42:21,379 - INFO - REGISTER: post recieved
+2025-10-16 11:42:21,382 - INFO - REGISTER: Form is not valid
+2025-10-16 11:42:21,482 - WARNING - Not Found: /favicon.ico
+2025-10-16 11:42:41,268 - INFO - HOME: view loaded
+2025-10-16 11:42:41,268 - INFO - REGISTER: view running
+2025-10-16 11:42:42,435 - INFO - HOME: view loaded
+2025-10-16 11:42:42,435 - INFO - REGISTER: view running
+2025-10-16 11:42:43,371 - INFO - HOME: view loaded
+2025-10-16 11:42:43,371 - INFO - REGISTER: view running
+2025-10-16 11:42:43,510 - WARNING - Not Found: /favicon.ico
+2025-10-16 11:43:01,675 - INFO - HOME: view loaded
+2025-10-16 11:43:01,675 - INFO - REGISTER: view running
+2025-10-16 11:43:01,801 - WARNING - Not Found: /favicon.ico
+2025-10-16 11:54:07,323 - INFO - C:\Users\160245594\Documents\GitHub\ShiatsuWebsite\shiatsushane\website\views.py changed, reloading.
+2025-10-16 11:56:56,149 - INFO - HOME: view loaded
+2025-10-16 11:56:56,150 - INFO - REGISTER: view running
+2025-10-16 11:56:56,428 - WARNING - Not Found: /favicon.ico
+2025-10-16 11:57:10,691 - INFO - HOME: view loaded
+2025-10-16 11:57:10,692 - INFO - REGISTER: view running
+2025-10-16 11:57:10,692 - INFO - REGISTER: post recieved
+2025-10-16 11:57:10,698 - INFO - REGISTER: form is valid
+2025-10-16 11:57:10,843 - INFO - REGISTER: Saved form
+2025-10-16 11:57:38,473 - INFO - C:\Users\160245594\Documents\GitHub\ShiatsuWebsite\shiatsushane\website\views.py changed, reloading.
