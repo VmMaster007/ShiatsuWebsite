@@ -8,11 +8,15 @@
         </div>
         <div class="topbar-right">
             <a class="voucher" href="/vouchers/">Give the gift of relaxation — Gift Vouchers available now!</a>
-            <a class="auth" href="javascript:void(0)" onclick="show_modal('login')">Login</a>
-            <span class="divider">|</span>
-
-
-            <a class="auth" href="javascript:void(0)" onclick="show_modal('register')">Register</a>
+            {% if user.is_authenticated %}
+                <span class="welcome-text">Welcome, {{ user.username }}!</span>
+                <span class="divider">|</span>
+                <a class="auth" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+                <a class="auth" href="javascript:void(0)" onclick="show_modal('login')">Login</a>
+                <span class="divider">|</span>
+                <a class="auth" href="javascript:void(0)" onclick="show_modal('register')">Register</a>
+            {% endif %}
         </div>
     </div>
 </div>
