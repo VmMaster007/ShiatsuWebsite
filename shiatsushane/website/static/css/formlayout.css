@@ -100,6 +100,7 @@ body::before {
 
 /* --- Card --- */
 .auth-card {
+  position: relative;
   background: var(--cream-bg);
   width: min(550px, 100%);
   border-radius: 20px;

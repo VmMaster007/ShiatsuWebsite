@@ -6,6 +6,7 @@
     <div class="pannel">
         <div class="auth-page">
             <div class="auth-card">
+                <a onclick="close_modal()" href="" class="close">Close</a>
                 <h2 class="auth-title">Create Your Account</h2>
                 <div class="auth-divider"></div>
 
@@ -23,3 +24,11 @@
     </div>
 </div>
 {% endblock %}
+
+<script>
+    function close_modal(){
+        console.log("clicked")
+        model = document.getElementsByClassName("model")
+        model[0].style.display = "none"
+    }
+</script>
