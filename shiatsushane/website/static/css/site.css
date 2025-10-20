@@ -1,122 +1,203 @@
-/* Remove the default 8px margin most browsers add */
+/* =========================================================
+   site.css — Global theme, topbar, navbar, modal
+   ========================================================= */
+
+/* Reset & base */
 html, body { margin: 0; padding: 0; }
+* { box-sizing: border-box; }
+img { max-width: 100%; display: block; }
+html { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+.container { width: min(1200px, 92%); margin-inline: auto; }
 
-/* static/css/site.css */
+/* ---------------- Theme variables ---------------- */
 :root{
---ink: #26322C; /* dark text */
---paper: #ffffff; /* base background */
---sage: #7D9B87; /* green used in screenshot */
---sage-900:#2A3A33; /* deep green text on sage */
---sage-700:#5E7E6C; /* hover */
---deep: #0B1712; /* very dark footer/overlays */
---muted:#6A736E;
---radius-pill: 9999px;
---radius: 18px;
+  --ink: #26322C;      /* dark text */
+  --paper: #ffffff;    /* base background */
+  --sage: #7D9B87;     /* brand green */
+  --sage-900:#2A3A33;  /* deep green text on sage */
+  --sage-700:#5E7E6C;  /* hover */
+  --deep: #0B1712;     /* very dark footer/overlays */
+  --muted:#6A736E;
+
+  --radius-pill: 9999px;
+  --radius: 18px;
+
+  /* Header sizing — hero will read these */
+  --topbar-h: 56px;        /* height of topbar */
+  --navbar-h: 100px;       /* height of navbar */
+  --header-gap: 20px;      /* visible space between topbar & navbar */
+  --header-bars-h: calc(var(--topbar-h) + var(--navbar-h));
+  --header-h: calc(var(--header-bars-h) + var(--header-gap)); /* total header + gap */
 }
-*{box-sizing:border-box}
-html{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-body{margin:0;color:var(--ink);background:var(--paper)}
-img{max-width:100%;display:block}
-.container{width:min(1200px,92%);margin-inline:auto}
 
+/* Base colors */
+body { color: var(--ink); background: var(--paper); }
 
-/* Topbar */
-.topbar{background:var(--sage);color:var(--sage-900)}
-.topbar-inner{display:flex;gap:1rem;align-items:center;justify-content:space-between;padding:.65rem 0}
-.topbar-left{display:flex;align-items:center;gap:.5rem;font-weight:600}
-.topbar-icon{font-size:1.1rem}
-.topbar-right{display:flex;align-items:center;gap:1rem}
-.topbar .voucher{font-weight:700;text-decoration:none;color:var(--sage-900)}
-.topbar .auth{color:var(--sage-900);text-decoration:none}
-.topbar .divider{opacity:.6}
+/* =========================================================
+   Topbar
+   ========================================================= */
+.topbar { background: var(--sage); color: var(--sage-900); }
+.topbar-inner{
+  height: var(--topbar-h);                 /* fixed height */
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1rem; padding:0 1.25rem;
+  white-space: nowrap;                     /* prevent wrapping */
+  overflow: hidden;                        /* avoid height jumps */
+}
+.topbar-left,.topbar-right{ min-width: 0; } /* allow ellipsis */
+.topbar .voucher{ font-weight:700; text-decoration:none; color:var(--sage-900); }
+.topbar .auth{ color:var(--sage-900); text-decoration:none; }
+.topbar .divider{ opacity:.6; }
 
+/* Keep header stacked above hero */
+.topbar, .navwrap { position: relative; z-index: 10; }
 
-/* Navbar (pill) */
-.navwrap{position:relative;z-index:5;margin-top:12px}
-.navbar{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1rem;background:var(--sage);border-radius:var(--radius-pill);padding:.9rem 1.25rem;box-shadow:0 8px 24px rgba(0,0,0,.15)}
-.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--sage-900);font-family:'Playfair Display', serif;font-weight:700;font-size:1.35rem}
-.brand-logo{width:48px;height:48px;border-radius:50%;object-fit:cover}
-.brand-name{letter-spacing:.2px}
-.menu{display:flex;justify-content:center;gap:2.25rem;list-style:none;margin:0;padding:0}
-.menu a{font-family:'Playfair Display', serif;font-weight:600;text-decoration:none;color:var(--sage-900);font-size:1.25rem}
-.btn{display:inline-block;border-radius:var(--radius-pill);padding:.7rem 1.1rem;font-weight:800;text-decoration:none}
-.btn.btn-book{background:transparent;border:2px solid var(--sage-900);color:var(--sage-900)}
-.btn.btn-book:hover{background:var(--sage-700);border-color:var(--sage-700);color:#fff}
-.nav-toggle{display:none;background:none;border:0;font-size:1.6rem}
+/* =========================================================
+   Navbar (pill)
+   ========================================================= */
+.navwrap{ margin-top: var(--header-gap) !important; }  /* the visible gap */
+.navbar{
+  min-height: var(--navbar-h);
+  display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:1rem;
+  background:var(--sage);
+  border-radius:var(--radius-pill);
+  padding: 1rem 1.25rem !important;
+  box-shadow:0 8px 24px rgba(0,0,0,.15);
+}
+.brand{
+  display:flex; align-items:center; gap:.75rem; text-decoration:none; color:var(--sage-900);
+  font-family:'Playfair Display', serif; font-weight:700; font-size:1.6rem;
+}
+.brand-logo{ width:48px; height:48px; border-radius:50%; object-fit:cover; }
+.brand-name{ letter-spacing:.2px; }
+.menu{ display:flex; justify-content:center; gap:2.25rem; list-style:none; margin:0; padding:0; }
+.menu a{
+  font-family:'Playfair Display', serif; font-weight:600; text-decoration:none; color:var(--sage-900);
+  font-size:1.3rem;
+}
+.btn{ display:inline-block; border-radius:var(--radius-pill); padding:.9rem 1.3rem; font-weight:800; text-decoration:none; }
+.btn.btn-book{ background:transparent; border:2px solid var(--sage-900); color:var(--sage-900); }
+.btn.btn-book:hover{ background:var(--sage-700); border-color:var(--sage-700); color:#fff; }
+.nav-toggle{ display:none; background:none; border:0; font-size:1.6rem; }
 
-
-/* Hero */
-.hero{position:relative;isolation:isolate;margin-top: 0;}
-.hero-bg{width:100%;height:72vh;object-fit:cover;display:block}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,.35));z-index:1}
-.hero-inner{position:absolute;inset:0;display:grid;place-items:center;text-align:center;z-index:2}
-.hero-badge{width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,.25);display:grid;place-items:center;margin-bottom:1rem;backdrop-filter:blur(2px)}
-.hero-title{font-family:'Playfair Display', serif;color:#2a2928;font-weight:700;font-size:clamp(2rem,4vw,3.2rem);line-height:1.15;max-width:14ch;color:#2B2B29;background-color:rgba(255,255,255,.55);padding:.5rem 1rem;border-radius:14px}
-
-
-/* Responsive */
+/* Responsive navbar collapse + sizes follow vars */
 @media (max-width: 900px){
-.navbar{grid-template-columns:1fr auto;gap:.5rem}
-.menu{display:none}
-.nav-toggle{display:block;justify-self:end}
+  :root{
+    --topbar-h: 58px;
+    --navbar-h: 92px;
+    --header-gap: 16px;
+    --header-bars-h: calc(var(--topbar-h) + var(--navbar-h));
+    --header-h: calc(var(--header-bars-h) + var(--header-gap));
+  }
+  .navbar{ grid-template-columns:1fr auto; gap:.5rem; }
+  .menu{ display:none; }
+  .nav-toggle{ display:block; justify-self:end; }
+  .brand{ font-size:1.45rem; }
+  .menu a{ font-size:1.15rem; }
 }
-/* Modal Popup CSS */
+@media (max-width: 640px){
+  :root{
+    --topbar-h: 64px;    /* plenty of room so text doesn’t wrap */
+    --navbar-h: 86px;
+    --header-gap: 12px;
+    --header-bars-h: calc(var(--topbar-h) + var(--navbar-h));
+    --header-h: calc(var(--header-bars-h) + var(--header-gap));
+  }
+  .brand{ font-size:1.35rem; }
+  .btn.btn-book{ padding:.75rem 1.05rem; }
+}
+
+/* =========================================================
+   Hero shell (detailed layout is in formlayout.css)
+   ========================================================= */
+.hero{ position:relative; isolation:isolate; margin-top:0; }
+
+/* =========================================================
+   Modal
+   ========================================================= */
 .modal {
-    display: none;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.15);
-    position: absolute;
-    left: 0;
-    top: 0;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.15);
+  position: absolute;
+  left: 0; top: 0;
 }
-
-.blockclass{
-    display: block;
-}
-
-.hideclass{
-    display: none;
-}
+.blockclass{ display: block; }
+.hideclass{ display: none; }
 
 .pannel{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 120px;
-    width: 800px;
-    height: 100vh;
-    text-align: center;
-    color: black;
-    border-radius: 10px;
+  margin-left: auto; margin-right: auto; margin-top: 120px;
+  width: 800px; height: 100vh; text-align: center; color: black; border-radius: 10px;
 }
 
-.btn-close{
-    display: none;
-}
+.btn-close{ display: none; }
 
 .close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  text-decoration: none;
-  color: var(--text-dark);
-  font-size: 1.2rem;
-  font-weight: 600;
-  background: var(--sage-green-pale);
-  border-radius: 50px;
-  padding: 6px 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: absolute; top: 15px; right: 20px;
+  text-decoration: none; color: var(--ink); font-size: 1.2rem; font-weight: 600;
+  background: #dbe4dd; border-radius: 50px; padding: 6px 14px; cursor: pointer;
+  transition: all 0.3s ease; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.close:hover { background: #89a88d; color: #fff; transform: scale(1.05); }
+
+/* =========================================================
+   Footer
+   ========================================================= */
+footer{ color:#eee; background:var(--deep); }
+
+/* ===== Topbar icon/text alignment fix ===== */
+.topbar-inner { font-size: 0.98rem; }
+
+.topbar-left,
+.topbar-right {
+  display: flex;
+  align-items: center;     /* center everything on the same line */
+  gap: .5rem;
 }
 
-.close:hover {
-  background: var(--sage-green-light);
-  color: #fff;
-  transform: scale(1.05);
+/* Works for emoji, icon fonts, SVGs, or images */
+.topbar-icon {
+  display: inline-flex;    /* removes baseline weirdness */
+  align-items: center;
+  justify-content: center;
+  line-height: 1;          /* no extra vertical space */
+  font-size: 1.1em;        /* slight size bump is optional */
+  vertical-align: middle;
 }
 
+.topbar-text {
+  display: inline-flex;    /* matches icon behavior */
+  align-items: center;
+  line-height: 1;          /* aligns baseline with icon */
+}
 
+/* If your icon is an <img> or <svg>, this keeps it snug */
+.topbar-icon img,
+.topbar-icon svg {
+  display: block;
+  width: 1.1em;
+  height: 1.1em;
+}
 
-/* Footer idea placeholder (if needed later) */
-footer{color:#eee;background:var(--deep)}
+.animation-topbar {
+  position: relative;
+  overflow: hidden;           /* hides the text when offscreen */
+  white-space: nowrap;        /* keeps text in one line */
+}
+
+.animation-topbar span {
+  display: inline-block;
+  position: relative;
+  animation: topbarAnimation 6s linear infinite; /* slow + smooth */
+}
+
+/* Keyframes for left-to-right scrolling */
+@keyframes topbarAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}

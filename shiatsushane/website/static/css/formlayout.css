@@ -1,12 +1,9 @@
 /* =========================================================
-   Shiatsu Shane — Global + Auth + Hero Styles (Bootstrap 5)
+   formlayout.css — Auth/Register + Hero layout
    ========================================================= */
 
-/* -----------------------------
-   0) BRAND PALETTE (variables)
-   ----------------------------- */
+/* Palette only used by auth UI (doesn’t clash with site.css) */
 :root {
-  /* Brand colors */
   --sage-green: #5c8160;
   --sage-green-light: #89a88d;
   --sage-green-pale: #dbe4dd;
@@ -14,75 +11,6 @@
   --text-dark: #2d2d2d;
   --text-muted: #6c6c6c;
   --accent: #b5e4c7;
-
-  /* Header sizing used to tuck hero under both bars
-     Tweak these if you still see a thin gap. */
-  --topbar-h: 22px;   /* thin announcement bar */
-  --navbar-h: 70px;   /* rounded main navbar */
-  --header-h: calc(var(--topbar-h) + var(--navbar-h));
-}
-
-/* -----------------------------
-   1) GLOBAL RESets / small fixes
-   ----------------------------- */
-html, body { /* kill default top/bottom gaps */
-  margin: 0; 
-  background-color: var(--cream-bg);
-  color: var(--text-dark); /* keeps text readable */
-}       
-
-/* global calming tint */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.13); /* soft neutral gray tint */
-  pointer-events: none;
-  z-index: 9999; /* sits above background but below content */
-}
-
-/* Ensure header elements always paint above the hero image
-   without changing their size or layout */
-.announcement-bar,
-.topbar,
-.navbar {
-  position: relative;
-  z-index: 1000;
-  margin-top: 0;                /* safety: avoid accidental gaps */
-}
-
-.animation-topbar {
-  position: relative;
-  overflow: hidden;           /* hides the text when offscreen */
-  white-space: nowrap;        /* keeps text in one line */
-}
-
-.animation-topbar span {
-  display: inline-block;
-  position: relative;
-  animation: topbarAnimation 6s linear infinite; /* slow + smooth */
-}
-
-/* Keyframes for left-to-right scrolling */
-@keyframes topbarAnimation {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(150%);
-  }
-}
-
-/* Optional: if the announcement bar had a bottom border/line,
-   removing it prevents a white hairline between bars */
-.topbar,
-.announcement-bar {
-  border-bottom: 0 !important;
-  box-shadow: none !important;
-}
-
-.voucher{
-  padding-right: 10rem;
 }
 
 /* =========================================================
@@ -188,91 +116,101 @@ body::before {
   font-size: 0.9rem;
 }
 
-/* --- Responsive tweaks for smaller screens --- */
-@media (max-width: 850px) {
-  .auth-card { padding: 1.5rem; width: 100%; }
-  /* NOTE: You had these already; leaving as-is to keep your current layout.
-     If this makes the auth page too tall on mobile, reduce padding-top. */
-  .auth-page { display: block; padding-top: 8rem; font-size: 2rem; }
-}
-
 /* =========================================================
-   HERO SECTION — image sits under announcement bar + navbar
+   HERO — Desktop: 1 full-bleed image; Phone: 3 stacked
+   (Uses header variables from site.css)
    ========================================================= */
 
-/* Pull the hero up by the combined header height so the image sits
-   *behind* both bars; add equal padding so hero content isn’t hidden. */
-.hero {
+/* Pull hero under ONLY the bars (topbar + navbar), not the gap */
+.hero{
   position: relative;
-  margin-top: calc(-1 * var(--header-h)) !important;  /* move up under header */
-  padding-top: var(--header-h) !important;            /* keep text visible */
-  min-height: 80vh;                                   /* visible hero area */
-  overflow: hidden;                                   /* clip overflow */
-  background: transparent;                            /* no white fallback */
-  background-position: center top;                    /* if using bg-image */
+  margin-top: calc(-1 * var(--header-bars-h)); /* tucks under bars */
+  padding-top: var(--header-bars-h);           /* keeps title visible */
+  min-height: 92vh;
+  isolation: isolate;
+  overflow: hidden;
 }
 
-/* Make an <img class="hero-bg"> behave like a cover background.
-   (Use this if your hero uses an <img>; if you switch to CSS background-image,
-   you can keep this anyway—it won’t hurt.) */
-.hero .hero-bg {
-  position: absolute;
-  inset: 0;                 /* top/right/bottom/left: 0 */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;        /* crop to cover the hero area */
-  display: block;           /* removes baseline gap */
-  z-index: 0;
+/* (A) Fallback: single <img class="hero-bg"> */
+.hero .hero-bg{
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; display: block; z-index: 0;
 }
 
-/* Optional dark gradient overlay for better text contrast on the photo. */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0)); /* change if wanting darker overlay */
-  z-index: 1;
+/* (B) Preferred multi-image structure (enables phone stack) */
+.hero-media{
+  position: absolute; inset: 0; z-index: 0;
+  display: block; /* desktop default: NOT grid */
 }
+.hero-img{ width: 100%; height: 100%; object-fit: cover; display: block; }
 
-/* Ensure hero text/content sits above the image/overlay. */
-.hero-inner { position: relative; z-index: 2; }
+/* Desktop/Tablet: one full-bleed image (center only) */
+.hero-left, .hero-right{ display: none; }
+.hero-center{ display: block; }
+/* Optional desktop crop: */
+/* .hero-center { object-position: center 45%; } */
 
-/* 3-image collage inside the hero */
-.hero-collage .hero-strip {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0; /* set to 4px if you want small gutters */
-  z-index: 0;
+/* Overlay + content layers */
+.hero-overlay{
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg,
+    rgba(0,0,0,.55) 0%,
+    rgba(0,0,0,.38) 35%,
+    rgba(0,0,0,.30) 100%
+  );
 }
-
-.hero-collage .hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;     /* fills area; crops as needed */
-  display: block;
+.hero-inner{
+  position: absolute; inset: 0; z-index: 2;
+  display: grid; place-items: center; text-align: center;
 }
-
-.hero-title {
+.hero-title{
+  font-family:'Playfair Display', serif;
+  font-weight:700; line-height:1.15;
+  font-size:clamp(2rem, 4vw, 3.2rem);
+  max-width:14ch;
+  color:#ffffff;
+  padding:.5rem 1rem;
+  border-radius:14px;
+  margin:0;
   background: none !important;
   backdrop-filter: none !important;
-  color: #fff;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
 }
 
-/* Optional: adjust crop to keep subjects nicely framed */
-.hero-collage .hero-left   { object-position: 40% center; }
-.hero-collage .hero-center { object-position: 50% center; }
-.hero-collage .hero-right  { object-position: 60% center; }
+/* Phones: stack the 3 images vertically (each 1/3 height) */
+@media (max-width: 640px){
+  .hero{ min-height: 100vh; }
 
-/* Mobile behavior: stack images vertically (1 per row) */
-@media (max-width: 640px) {
-  .hero-collage .hero-strip {
+  .hero-media{
+    display: grid;               /* only on phones */
     grid-template-columns: 1fr;
     grid-auto-rows: 33.34%;
   }
-  .hero-collage .hero-img { object-position: center; }
+
+  .hero-left, .hero-center, .hero-right{ display: block; }
+  .hero-img{ object-position: center; }
+
+  .hero-title{
+    font-size:clamp(1.6rem, 6vw, 2rem);
+    max-width: 18ch;
+  }
 }
+
+
+/* Force hero title text to white */
+.hero .hero-title { 
+  color: #fff !important;
+  -webkit-text-fill-color: #fff; /* covers rare WebKit overrides */
+}
+
+/* If your title contains a link/span etc., make those white too */
+.hero .hero-title *,
+.hero .hero-title a {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+/* Optional: improve contrast on busy photos */
+.hero .hero-title {
+  text-shadow: 0 2px 6px rgba(0,0,0,.4);
+}
+
