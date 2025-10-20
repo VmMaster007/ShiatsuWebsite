@@ -1,16 +1,12 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.forms.widgets import PasswordInput, TextInput
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Field, Div
 
 class CreateUserForm(UserCreationForm):
-    # email = forms.EmailField(
-    #     required=True,
-    #     help_text="Your email is confidential",
-    #     widget=forms.EmailInput(attrs={"placeholder": "johndoe@gmail.com"})
-    # )
 
     class Meta:
         model = User
@@ -30,10 +26,6 @@ class CreateUserForm(UserCreationForm):
         self.fields["password1"].label = "Password"
         self.fields["password2"].label = "Confirm password"
 
-        # Optional: remove the long default help text
-        # for name in ("username", "password1", "password2", "email"):
-        #     self.fields[name].help_text = "" #change info text if you want but only for certain field e.g. username
-
         # Crispy helper: vertical stack (label above input)
         self.helper = FormHelper()
         self.helper.form_method = "post"
@@ -46,17 +38,7 @@ class CreateUserForm(UserCreationForm):
             Div(Field("password2"), css_class="mb-2"),
         )
 
-        # Validate email uniqueness at the form level
-        # def clean_email(self):
-        #     # email = self.cleaned_data.get("email", "").strip()
-        #     if User.objects.filter(email_iexact=email).exists():
-        #         raise forms.ValidationError("An account with this email already exists.")
-        #     return email
-        
-        # # Save the email onto the user
-        # def save(self, commit=True):
-        #     user = super().save(commit=False) # UserCreationForm already set username + password hash
-        #     user.email = self.cleaned_data["email"]  # add email
-        #     if commit:
-        #         user.save()
-        #     return user
+# - Login User
+class LoginForm(AuthenticationForm):
+    username = forms.CharField(widget=TextInput())
+    password = forms.CharField(widget=PasswordInput())

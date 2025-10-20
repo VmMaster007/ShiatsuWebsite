@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="modal {{display}}">
+<div id="register-modal" class="modal {{display}}">
     <div class="pannel">
         <div class="auth-page">
             <div class="auth-card">
@@ -12,6 +12,7 @@
 
                 <form method="POST" autocomplete="off" class="auth-form">
                 {% csrf_token %}
+                <input type="hidden" name="form_type" value="register">
                 {{ form|crispy }}
                 <button type="submit" class="btn btn-primary w-100 mt-3">Create Account</button>
                 </form>
@@ -28,7 +29,7 @@
 <script>
     function close_modal(){
         console.log("clicked")
-        model = document.getElementsByClassName("model")
+        model = document.getElementsByClassName("modal")
         model[0].style.display = "none"
     }
 </script>
