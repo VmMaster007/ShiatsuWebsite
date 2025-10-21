@@ -6,5 +6,10 @@ nav{
 }
 
 .w-60 {  /* Custom width size for the navbar, paul idea */
-    width: 60%!important
+    width: 60%!important;
+}
+
+/* ########## TopBar ########## */
+.topbar{
+    height: 70px;
 }

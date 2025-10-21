@@ -1,27 +1,27 @@
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="topbar bg-primary text-white">
-   <div class="row justify-content-center">
-    <div class="col-4">
-      <span  aria-hidden="true" class="my-auto">🕒</span>
-        <marquee width="60%" direction="left">
-            Open Mon–Fri | Book Online Anytime!
-        </marquee>
-    </div>
-    <div class="col-4 ">
-        <a class="text-light" href="/vouchers/">Give the gift of relaxation — Gift Vouchers available now!</a>
-    {% if user.is_authenticated %}
-        <span class="welcome-text">Welcome, {{ user.username }}!</span>
-        <span class="divider">|</span>
-        <a class="text-light"  href="{% url 'logout' %}">Logout</a>
-    {% else %}
-    <div class="ms-5 inline-block d-inline">
-        <a  class="text-light" href="javascript:void(0)" onclick="show_modal('login')">Login</a>
-        <span class="divider">|</span>
-        <a class="text-light" href="javascript:void(0)" onclick="show_modal('register')">Register</a>
-    </div>
-    {% endif %}
-    </div>
+<div class="container-fluid topbar bg-primary text-white  w-100">
+   <div class="row justify-content-center align-items-center">
+        <div class="col-4 align-self-center">
+        <span aria-hidden="true" class="my-auto">🕒</span>
+            <marquee width="60%" direction="right">
+                Open Mon–Fri | Book Online Anytime!
+            </marquee>
+        </div>
+        <div class="col-4 align-self-center">
+            <a class="text-light" href="/vouchers/">Give the gift of relaxation — Gift Vouchers available now!</a>
+        {% if user.is_authenticated %}
+            <span class="welcome-text">Welcome, {{ user.username }}!</span>
+            <span class="divider">|</span>
+            <a class="text-light"  href="{% url 'logout' %}">Logout</a>
+        {% else %}
+        <div class="ms-5 inline-block d-inline">
+            <a  class="text-light" href="javascript:void(0)" onclick="show_modal('login')">Login</a>
+            <span class="divider">|</span>
+            <a class="text-light" href="javascript:void(0)" onclick="show_modal('register')">Register</a>
+        </div>
+        {% endif %}
+        </div>
   </div>
   </div>
 

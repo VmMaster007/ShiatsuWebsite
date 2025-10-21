@@ -1,52 +1,5 @@
 {% load static %}
-    <!-- templates/components/navbar.html -->
-    <!-- <header class="navwrap ">
-    <div class="container"> -->
-    <!-- <nav class="navbar" role="navigation" aria-label="Primary" >
-    <a class="brand" href="/">
-        <img src="../../static/img/logo.svg" alt="Shiatsu Shane logo" class="brand-logo">
-    <span class="brand-name">Shiatsu Shane</span>
-    </a>
-
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">☰</button>
-
-
-    <ul id="primary-menu" class="menu">
-    <li><a href="{% url 'home' %}">Home</a></li>
-    <li><a href="{% url 'about' %}">About</a></li>
-    <li><a href="#Shop">Shop</a></li>
-    <li><a href="#Courses">Courses</a></li>
-    </ul>
-
-
-    <a class="btn btn-book" href="/book/">Book Now!</a>
-    </nav> -->
-    <!-- </div>
-    </header>
-<script>
-  (function () {
-    const nav = document.querySelector('.navbar.fixed-top');
-    const topbar = document.querySelector('.topbar');
-
-    function setOffsets(){
-      const topH = topbar ? topbar.offsetHeight : 0;
-      document.documentElement.style.setProperty('--topbar-h', topH + 'px');
-      document.documentElement.style.setProperty('--navbar-h', nav.offsetHeight + 'px');
-      document.body.style.paddingTop = `calc(${topH}px + ${nav.offsetHeight}px)`;
-    }
-
-    setOffsets();
-    window.addEventListener('resize', setOffsets);
-
-    window.addEventListener('scroll', () => {
-      const scrolled = window.scrollY > 10;
-      document.body.classList.toggle('nav-scrolled', scrolled);
-      // nav height changes when shrunk—recalc padding
-      setOffsets();
-    }, { passive: true });
-  })();
-</script> -->
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center col-auto">
     <nav class="navbar navbar-expand-lg navbar-dark position-fixed rounded-pill bg-primary sticky-top w-60 mx-auto mt-5 w-5">
     <div class="container-fluid h-100">
     <img src="{% static 'img/logo.svg' %}" class="h-100" alt="">
