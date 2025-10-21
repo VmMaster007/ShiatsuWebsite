@@ -6,13 +6,16 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{% block title %}Shiatsu Shane — Relax, Restore, Renew{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'css/custom.scss' %}">
 <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{% static 'css/site.css' %}">
-<link rel="stylesheet" href="{% static 'css/formlayout.css' %}">
-<link rel="stylesheet" href="{% static 'css/hero.css' %}">
+<!-- <link rel="stylesheet" href="{% static 'css/site.css' %}"> -->
+<!-- <link rel="stylesheet" href="{% static 'css/formlayout.css' %}"> -->
+<!-- <link rel="stylesheet" href="{% static 'css/hero.css' %}"> -->
+<!-- <link rel="stylesheet" href="{% static 'css/about.css' %}"> -->
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
 {% block head_extra %}{% endblock %}
 </head>
 <body>
@@ -20,7 +23,7 @@
 {% include 'components/navbar.html' %}
 
 
-<main>
+
 
 
 {% block content %}
@@ -51,7 +54,7 @@
 
 {% include 'pages/Register.html' %}
 {% include 'pages/Login.html' %}
-</main>
+
 
 
 <script src="{% static 'js/site.js' %}"></script>

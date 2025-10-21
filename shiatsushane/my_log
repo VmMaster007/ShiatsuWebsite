@@ -2366,3 +2366,778 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'profile' not found. 'profile
 2025-10-20 12:11:17,021 - INFO - HOME: view loaded
 2025-10-20 12:11:17,021 - INFO - POST received for: login
 2025-10-20 12:11:17,165 - INFO - HOME: view loaded
+2025-10-21 09:30:30,760 - INFO - HOME: view loaded
+2025-10-21 09:30:31,395 - WARNING - Not Found: /favicon.ico
+2025-10-21 09:30:33,631 - INFO - HOME: view loaded
+2025-10-21 09:30:35,399 - INFO - HOME: view loaded
+2025-10-21 09:41:52,394 - INFO - HOME: view loaded
+2025-10-21 09:41:52,974 - WARNING - Not Found: /favicon.ico
+2025-10-21 09:42:01,231 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 10:22:40,405 - INFO - HOME: view loaded
+2025-10-21 10:22:41,859 - INFO - HOME: view loaded
+2025-10-21 10:22:42,835 - INFO - HOME: view loaded
+2025-10-21 10:22:43,546 - INFO - HOME: view loaded
+2025-10-21 10:22:45,391 - INFO - HOME: view loaded
+2025-10-21 10:22:57,013 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 10:23:58,928 - INFO - HOME: view loaded
+2025-10-21 10:25:09,788 - INFO - HOME: view loaded
+2025-10-21 10:25:10,707 - WARNING - Not Found: /favicon.ico
+2025-10-21 10:27:17,684 - INFO - HOME: view loaded
+2025-10-21 10:27:17,859 - WARNING - Not Found: /favicon.ico
+2025-10-21 10:59:54,031 - INFO - HOME: view loaded
+2025-10-21 10:59:54,198 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:00:02,901 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 11:00:52,424 - INFO - HOME: view loaded
+2025-10-21 11:00:52,488 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 11:00:52,597 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:01:00,902 - INFO - HOME: view loaded
+2025-10-21 11:01:00,956 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 11:01:01,031 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:01:18,734 - INFO - HOME: view loaded
+2025-10-21 11:01:18,807 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 11:01:18,872 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:01:27,626 - INFO - HOME: view loaded
+2025-10-21 11:01:27,700 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 11:01:27,774 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:03:37,044 - ERROR - Internal Server Error: /about
+Traceback (most recent call last):
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Git\ShiatsuWebsite\shiatsushane\website\views.py", line 112, in about
+    return render(request, "pages/about.html", context)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 567, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 8: 'static', expected 'endblock'. Did you forget to register or load this tag?
+2025-10-21 11:04:00,036 - INFO - C:\Git\ShiatsuWebsite\shiatsushane\website\urls.py changed, reloading.
+2025-10-21 11:05:40,458 - ERROR - Internal Server Error: /about
+Traceback (most recent call last):
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Git\ShiatsuWebsite\shiatsushane\website\views.py", line 112, in about
+    return render(request, "pages/about.html", context)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 567, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 8: 'static', expected 'endblock'. Did you forget to register or load this tag?
+2025-10-21 11:06:20,841 - ERROR - Internal Server Error: /about
+Traceback (most recent call last):
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Git\ShiatsuWebsite\shiatsushane\website\views.py", line 112, in about
+    return render(request, "pages/about.html", context)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 567, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 8: 'static', expected 'endblock'. Did you forget to register or load this tag?
+2025-10-21 11:06:24,353 - ERROR - Internal Server Error: /about
+Traceback (most recent call last):
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Git\ShiatsuWebsite\shiatsushane\website\views.py", line 112, in about
+    return render(request, "pages/about.html", context)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 567, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 8: 'static', expected 'endblock'. Did you forget to register or load this tag?
+2025-10-21 11:06:24,468 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:06:33,910 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:06:35,145 - INFO - HOME: view loaded
+2025-10-21 11:06:35,180 - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Git\ShiatsuWebsite\shiatsushane\website\views.py", line 98, in home
+    return render(request, "pages/index.html", context)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\160245594\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 577, in invalid_block_tag
+    raise self.error(
+    ...<3 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 44: 'endblock'. Did you forget to register or load this tag?
+2025-10-21 11:06:55,063 - INFO - HOME: view loaded
+2025-10-21 11:06:55,192 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:06:58,896 - INFO - HOME: view loaded
+2025-10-21 11:07:01,384 - INFO - HOME: view loaded
+2025-10-21 11:12:44,292 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 11:13:55,279 - INFO - HOME: view loaded
+2025-10-21 11:13:55,347 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 11:13:55,459 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:14:13,921 - INFO - HOME: view loaded
+2025-10-21 11:14:14,077 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:14:47,594 - INFO - HOME: view loaded
+2025-10-21 11:14:47,699 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:14:50,451 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 11:16:08,467 - INFO - HOME: view loaded
+2025-10-21 11:16:08,521 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 11:16:08,618 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:18:47,288 - INFO - HOME: view loaded
+2025-10-21 11:18:47,473 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:19:13,032 - INFO - HOME: view loaded
+2025-10-21 11:19:13,194 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:19:31,158 - INFO - HOME: view loaded
+2025-10-21 11:19:31,282 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:19:59,007 - INFO - HOME: view loaded
+2025-10-21 11:19:59,184 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:20:12,244 - INFO - HOME: view loaded
+2025-10-21 11:20:12,367 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:20:25,608 - INFO - HOME: view loaded
+2025-10-21 11:20:25,736 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:20:36,400 - INFO - HOME: view loaded
+2025-10-21 11:20:36,526 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:20:48,893 - INFO - HOME: view loaded
+2025-10-21 11:20:49,017 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:21:54,936 - INFO - HOME: view loaded
+2025-10-21 11:21:55,109 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:22:35,854 - INFO - HOME: view loaded
+2025-10-21 11:22:36,021 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:22:49,028 - INFO - HOME: view loaded
+2025-10-21 11:22:49,152 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:23:18,509 - INFO - HOME: view loaded
+2025-10-21 11:23:18,671 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:23:34,612 - INFO - HOME: view loaded
+2025-10-21 11:23:34,786 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:23:43,798 - INFO - HOME: view loaded
+2025-10-21 11:23:43,917 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:31:17,456 - INFO - HOME: view loaded
+2025-10-21 11:31:17,615 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:31:33,246 - INFO - HOME: view loaded
+2025-10-21 11:31:33,364 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:31:43,999 - INFO - HOME: view loaded
+2025-10-21 11:31:44,117 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:37:45,394 - INFO - HOME: view loaded
+2025-10-21 11:37:45,552 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:38:03,378 - INFO - HOME: view loaded
+2025-10-21 11:38:03,499 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:43:46,052 - INFO - HOME: view loaded
+2025-10-21 11:43:46,213 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:44:04,975 - INFO - HOME: view loaded
+2025-10-21 11:44:05,094 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:44:13,646 - INFO - HOME: view loaded
+2025-10-21 11:44:13,768 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:44:23,377 - INFO - HOME: view loaded
+2025-10-21 11:44:23,500 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:44:33,327 - INFO - HOME: view loaded
+2025-10-21 11:44:33,457 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:45:34,831 - INFO - HOME: view loaded
+2025-10-21 11:45:39,230 - INFO - HOME: view loaded
+2025-10-21 11:45:39,333 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:46:06,974 - INFO - HOME: view loaded
+2025-10-21 11:46:40,622 - INFO - HOME: view loaded
+2025-10-21 11:46:43,977 - INFO - HOME: view loaded
+2025-10-21 11:46:44,131 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:48:01,436 - INFO - HOME: view loaded
+2025-10-21 11:48:01,622 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:48:12,903 - INFO - HOME: view loaded
+2025-10-21 11:48:15,221 - INFO - HOME: view loaded
+2025-10-21 11:48:15,723 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:48:30,247 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 11:49:42,505 - INFO - HOME: view loaded
+2025-10-21 11:49:58,055 - INFO - HOME: view loaded
+2025-10-21 11:49:59,612 - INFO - HOME: view loaded
+2025-10-21 11:50:02,544 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 11:50:41,336 - INFO - HOME: view loaded
+2025-10-21 11:50:41,401 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 11:50:56,695 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 11:51:04,848 - INFO - HOME: view loaded
+2025-10-21 11:51:05,254 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:51:23,788 - INFO - HOME: view loaded
+2025-10-21 11:51:23,979 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:51:35,683 - INFO - HOME: view loaded
+2025-10-21 11:51:37,372 - INFO - HOME: view loaded
+2025-10-21 11:51:37,502 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:51:40,777 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 11:52:17,123 - INFO - HOME: view loaded
+2025-10-21 11:52:17,309 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:53:28,685 - INFO - HOME: view loaded
+2025-10-21 11:53:28,783 - WARNING - Not Found: /favicon.ico
+2025-10-21 11:53:31,826 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 11:54:36,384 - INFO - HOME: view loaded
+2025-10-21 11:54:36,483 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 11:55:04,540 - INFO - HOME: view loaded
+2025-10-21 11:55:25,450 - INFO - HOME: view loaded
+2025-10-21 11:55:39,561 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 11:57:03,780 - INFO - HOME: view loaded
+2025-10-21 11:57:21,801 - INFO - HOME: view loaded
+2025-10-21 11:57:34,497 - INFO - HOME: view loaded
+2025-10-21 11:59:41,073 - INFO - HOME: view loaded
+2025-10-21 12:02:30,151 - INFO - HOME: view loaded
+2025-10-21 12:02:52,398 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 12:03:49,068 - INFO - HOME: view loaded
+2025-10-21 12:03:49,130 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 12:05:25,433 - INFO - HOME: view loaded
+2025-10-21 12:05:25,504 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 12:06:01,368 - INFO - HOME: view loaded
+2025-10-21 12:06:06,680 - INFO - HOME: view loaded
+2025-10-21 12:06:07,239 - INFO - HOME: view loaded
+2025-10-21 12:06:08,373 - INFO - HOME: view loaded
+2025-10-21 12:06:08,536 - WARNING - Not Found: /favicon.ico
+2025-10-21 12:07:22,556 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 12:08:06,384 - INFO - HOME: view loaded
+2025-10-21 12:08:06,448 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 12:08:33,480 - INFO - HOME: view loaded
+2025-10-21 12:08:33,545 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 12:08:53,960 - INFO - HOME: view loaded
+2025-10-21 12:09:13,000 - INFO - HOME: view loaded
+2025-10-21 12:09:21,894 - INFO - HOME: view loaded
+2025-10-21 12:09:40,773 - INFO - HOME: view loaded
+2025-10-21 12:10:47,917 - INFO - HOME: view loaded
+2025-10-21 12:11:00,318 - INFO - HOME: view loaded
+2025-10-21 12:11:42,533 - INFO - HOME: view loaded
+2025-10-21 12:11:46,240 - INFO - HOME: view loaded
+2025-10-21 12:11:46,367 - WARNING - Not Found: /favicon.ico
+2025-10-21 12:11:56,836 - INFO - HOME: view loaded
+2025-10-21 12:12:44,219 - INFO - HOME: view loaded
+2025-10-21 12:12:52,980 - INFO - HOME: view loaded
+2025-10-21 12:12:53,095 - WARNING - Not Found: /favicon.ico
+2025-10-21 12:13:16,924 - INFO - HOME: view loaded
+2025-10-21 12:13:29,716 - INFO - HOME: view loaded
+2025-10-21 12:13:35,227 - INFO - HOME: view loaded
+2025-10-21 12:14:10,948 - INFO - HOME: view loaded
+2025-10-21 12:14:30,835 - INFO - HOME: view loaded
+2025-10-21 13:56:36,076 - INFO - HOME: view loaded
+2025-10-21 13:56:38,319 - INFO - HOME: view loaded
+2025-10-21 13:56:38,489 - WARNING - Not Found: /favicon.ico
+2025-10-21 13:56:40,438 - INFO - HOME: view loaded
+2025-10-21 13:56:40,556 - WARNING - Not Found: /favicon.ico
+2025-10-21 13:57:51,672 - INFO - HOME: view loaded
+2025-10-21 13:57:51,839 - WARNING - Not Found: /favicon.ico
+2025-10-21 13:59:38,704 - INFO - HOME: view loaded
+2025-10-21 13:59:38,814 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:02:42,669 - INFO - HOME: view loaded
+2025-10-21 14:02:42,846 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:02:51,297 - INFO - HOME: view loaded
+2025-10-21 14:02:51,481 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:06:21,883 - INFO - HOME: view loaded
+2025-10-21 14:06:22,040 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:06:49,437 - INFO - HOME: view loaded
+2025-10-21 14:06:55,205 - INFO - HOME: view loaded
+2025-10-21 14:08:10,341 - INFO - HOME: view loaded
+2025-10-21 14:08:10,517 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:08:50,747 - INFO - HOME: view loaded
+2025-10-21 14:08:50,921 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:13:32,988 - INFO - HOME: view loaded
+2025-10-21 14:13:33,158 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:18:12,289 - INFO - HOME: view loaded
+2025-10-21 14:18:12,441 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:18:33,850 - INFO - HOME: view loaded
+2025-10-21 14:18:33,966 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:18:59,355 - INFO - HOME: view loaded
+2025-10-21 14:18:59,509 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:19:07,488 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:19:53,195 - INFO - HOME: view loaded
+2025-10-21 14:19:53,267 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:19:53,342 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:20:52,599 - INFO - HOME: view loaded
+2025-10-21 14:20:52,724 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:20:52,783 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:21:17,982 - INFO - HOME: view loaded
+2025-10-21 14:21:18,050 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:21:18,168 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:21:39,151 - INFO - HOME: view loaded
+2025-10-21 14:21:39,223 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:21:39,331 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:22:35,420 - INFO - HOME: view loaded
+2025-10-21 14:22:35,505 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:22:35,619 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:23:58,699 - INFO - HOME: view loaded
+2025-10-21 14:23:58,773 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:23:58,907 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:24:29,765 - INFO - HOME: view loaded
+2025-10-21 14:24:29,842 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:24:29,977 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:25:22,948 - INFO - HOME: view loaded
+2025-10-21 14:25:23,024 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:25:23,140 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:25:52,815 - INFO - HOME: view loaded
+2025-10-21 14:25:52,886 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:25:52,955 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:26:55,716 - INFO - HOME: view loaded
+2025-10-21 14:26:55,805 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:26:55,886 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:27:55,784 - INFO - HOME: view loaded
+2025-10-21 14:27:55,955 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:28:17,802 - INFO - HOME: view loaded
+2025-10-21 14:28:17,955 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:29:41,201 - INFO - HOME: view loaded
+2025-10-21 14:29:41,319 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:29:52,136 - INFO - HOME: view loaded
+2025-10-21 14:29:52,249 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:30:05,693 - INFO - HOME: view loaded
+2025-10-21 14:30:05,854 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:31:19,323 - INFO - HOME: view loaded
+2025-10-21 14:31:19,483 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:32:52,840 - INFO - HOME: view loaded
+2025-10-21 14:32:52,994 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:33:09,428 - INFO - HOME: view loaded
+2025-10-21 14:33:09,585 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:34:24,368 - INFO - HOME: view loaded
+2025-10-21 14:34:24,528 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:34:27,338 - INFO - HOME: view loaded
+2025-10-21 14:34:27,501 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:34:53,938 - INFO - HOME: view loaded
+2025-10-21 14:36:47,660 - INFO - HOME: view loaded
+2025-10-21 14:36:47,866 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:40:26,520 - INFO - HOME: view loaded
+2025-10-21 14:42:40,677 - INFO - HOME: view loaded
+2025-10-21 14:42:40,880 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:42:59,236 - INFO - HOME: view loaded
+2025-10-21 14:42:59,356 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:43:11,238 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:43:38,767 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:44:19,166 - INFO - HOME: view loaded
+2025-10-21 14:44:19,249 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:44:19,368 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:44:40,624 - INFO - HOME: view loaded
+2025-10-21 14:44:40,701 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:44:40,814 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:48:30,069 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:49:31,959 - INFO - HOME: view loaded
+2025-10-21 14:49:32,042 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:49:32,133 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:49:38,725 - INFO - HOME: view loaded
+2025-10-21 14:49:38,886 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:49:47,736 - INFO - HOME: view loaded
+2025-10-21 14:49:47,921 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:50:07,207 - INFO - HOME: view loaded
+2025-10-21 14:50:07,359 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:50:36,552 - INFO - HOME: view loaded
+2025-10-21 14:50:36,671 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:50:41,795 - INFO - HOME: view loaded
+2025-10-21 14:50:41,950 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:50:44,423 - INFO - HOME: view loaded
+2025-10-21 14:50:44,585 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:51:06,262 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:52:16,160 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:55:24,574 - INFO - HOME: view loaded
+2025-10-21 14:55:24,662 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 14:55:24,702 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:56:16,404 - INFO - HOME: view loaded
+2025-10-21 14:56:16,505 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:56:18,069 - INFO - HOME: view loaded
+2025-10-21 14:56:18,217 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:56:34,950 - INFO - HOME: view loaded
+2025-10-21 14:57:05,828 - INFO - HOME: view loaded
+2025-10-21 14:57:05,938 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:57:14,390 - INFO - HOME: view loaded
+2025-10-21 14:57:14,491 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:57:17,811 - INFO - HOME: view loaded
+2025-10-21 14:57:17,922 - WARNING - Not Found: /favicon.ico
+2025-10-21 14:58:42,928 - INFO - HOME: view loaded
+2025-10-21 14:58:43,033 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:02:39,598 - INFO - HOME: view loaded
+2025-10-21 15:02:39,711 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:03:03,741 - INFO - HOME: view loaded
+2025-10-21 15:03:03,873 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:03:15,113 - INFO - HOME: view loaded
+2025-10-21 15:03:15,214 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:03:22,580 - INFO - HOME: view loaded
+2025-10-21 15:03:22,683 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:04:03,425 - INFO - HOME: view loaded
+2025-10-21 15:04:03,509 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:04:14,657 - INFO - HOME: view loaded
+2025-10-21 15:04:14,757 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:04:20,801 - INFO - HOME: view loaded
+2025-10-21 15:04:20,901 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:04:36,349 - INFO - HOME: view loaded
+2025-10-21 15:04:36,443 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:05:10,355 - INFO - HOME: view loaded
+2025-10-21 15:05:10,458 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:05:16,232 - INFO - HOME: view loaded
+2025-10-21 15:05:16,367 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:05:50,774 - INFO - HOME: view loaded
+2025-10-21 15:05:50,874 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:05:56,720 - INFO - HOME: view loaded
+2025-10-21 15:05:56,822 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:06:04,179 - INFO - HOME: view loaded
+2025-10-21 15:06:04,295 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:06:08,690 - INFO - HOME: view loaded
+2025-10-21 15:06:08,789 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:06:17,095 - INFO - HOME: view loaded
+2025-10-21 15:06:17,190 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:06:27,603 - INFO - HOME: view loaded
+2025-10-21 15:06:27,737 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:07:19,327 - INFO - HOME: view loaded
+2025-10-21 15:07:19,439 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:07:29,437 - INFO - HOME: view loaded
+2025-10-21 15:07:29,575 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:07:51,666 - INFO - HOME: view loaded
+2025-10-21 15:07:51,764 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:09:06,895 - INFO - HOME: view loaded
+2025-10-21 15:09:06,994 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:09:18,876 - INFO - HOME: view loaded
+2025-10-21 15:09:18,992 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:09:35,107 - INFO - HOME: view loaded
+2025-10-21 15:09:35,226 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:09:44,340 - INFO - HOME: view loaded
+2025-10-21 15:09:44,463 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:09:59,635 - INFO - HOME: view loaded
+2025-10-21 15:09:59,709 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:10:57,760 - INFO - HOME: view loaded
+2025-10-21 15:10:57,872 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:11:04,864 - INFO - HOME: view loaded
+2025-10-21 15:11:04,970 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:11:18,774 - INFO - HOME: view loaded
+2025-10-21 15:11:18,871 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:11:31,981 - INFO - HOME: view loaded
+2025-10-21 15:11:32,133 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:12:15,073 - INFO - HOME: view loaded
+2025-10-21 15:12:15,182 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:32:14,578 - INFO - HOME: view loaded
+2025-10-21 15:32:44,863 - INFO - HOME: view loaded
+2025-10-21 15:32:45,003 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:34:12,062 - INFO - HOME: view loaded
+2025-10-21 15:34:12,160 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:39:12,668 - INFO - HOME: view loaded
+2025-10-21 15:39:12,818 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:39:32,093 - INFO - HOME: view loaded
+2025-10-21 15:39:32,247 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:39:36,265 - INFO - HOME: view loaded
+2025-10-21 15:39:36,359 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:39:38,706 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 15:40:31,693 - INFO - HOME: view loaded
+2025-10-21 15:40:31,771 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 15:40:31,878 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:40:50,374 - INFO - HOME: view loaded
+2025-10-21 15:40:50,473 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:41:01,238 - INFO - HOME: view loaded
+2025-10-21 15:41:01,348 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:41:07,880 - INFO - HOME: view loaded
+2025-10-21 15:41:07,988 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:41:30,297 - INFO - HOME: view loaded
+2025-10-21 15:41:30,432 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:41:35,734 - INFO - HOME: view loaded
+2025-10-21 15:41:35,888 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:41:42,576 - INFO - HOME: view loaded
+2025-10-21 15:41:42,703 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:41:47,779 - INFO - HOME: view loaded
+2025-10-21 15:41:47,880 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:41:55,031 - INFO - HOME: view loaded
+2025-10-21 15:41:55,137 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:42:27,429 - INFO - HOME: view loaded
+2025-10-21 15:42:27,536 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:42:37,506 - INFO - HOME: view loaded
+2025-10-21 15:42:37,602 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:42:43,559 - INFO - HOME: view loaded
+2025-10-21 15:42:43,658 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:43:05,062 - INFO - HOME: view loaded
+2025-10-21 15:43:05,164 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:43:30,451 - INFO - HOME: view loaded
+2025-10-21 15:43:30,560 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:43:42,456 - INFO - HOME: view loaded
+2025-10-21 15:43:42,554 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:44:05,557 - INFO - HOME: view loaded
+2025-10-21 15:44:05,658 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:44:12,022 - INFO - HOME: view loaded
+2025-10-21 15:44:12,127 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:44:21,156 - INFO - HOME: view loaded
+2025-10-21 15:44:21,259 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:44:45,127 - INFO - HOME: view loaded
+2025-10-21 15:44:45,236 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:45:07,745 - INFO - HOME: view loaded
+2025-10-21 15:45:07,883 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:45:20,125 - INFO - HOME: view loaded
+2025-10-21 15:45:20,223 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:45:54,469 - INFO - HOME: view loaded
+2025-10-21 15:45:54,568 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:46:25,376 - INFO - HOME: view loaded
+2025-10-21 15:46:25,511 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:46:32,529 - INFO - HOME: view loaded
+2025-10-21 15:46:32,667 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:46:41,860 - INFO - HOME: view loaded
+2025-10-21 15:46:41,963 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:46:54,163 - INFO - HOME: view loaded
+2025-10-21 15:46:54,240 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:47:29,782 - INFO - HOME: view loaded
+2025-10-21 15:47:29,878 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:47:39,809 - INFO - HOME: view loaded
+2025-10-21 15:47:39,891 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:47:47,009 - INFO - HOME: view loaded
+2025-10-21 15:47:47,107 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:49:48,576 - INFO - HOME: view loaded
+2025-10-21 15:49:48,713 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:50:03,659 - INFO - HOME: view loaded
+2025-10-21 15:50:03,820 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:50:22,930 - INFO - HOME: view loaded
+2025-10-21 15:50:23,031 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:50:50,719 - INFO - HOME: view loaded
+2025-10-21 15:50:50,822 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:52:55,700 - INFO - HOME: view loaded
+2025-10-21 15:52:55,844 - WARNING - Not Found: /favicon.ico
+2025-10-21 15:54:08,221 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 15:56:18,328 - INFO - HOME: view loaded
+2025-10-21 15:56:18,429 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 15:57:04,017 - INFO - HOME: view loaded
+2025-10-21 15:57:04,080 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 15:58:26,736 - INFO - HOME: view loaded
+2025-10-21 15:58:26,817 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 15:58:31,705 - INFO - HOME: view loaded
+2025-10-21 15:58:42,034 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 15:59:27,625 - INFO - HOME: view loaded
+2025-10-21 15:59:27,679 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 15:59:34,097 - INFO - HOME: view loaded
+2025-10-21 15:59:34,142 - WARNING - Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-10-21 16:00:52,058 - INFO - HOME: view loaded
+2025-10-21 16:00:52,152 - WARNING - Not Found: /favicon.ico

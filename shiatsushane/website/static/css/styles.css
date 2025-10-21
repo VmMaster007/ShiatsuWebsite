@@ -1,0 +1,10 @@
+/* ########## CSS FOR WEBSITE ##########*/
+
+/* ########## NavBar ########## */
+nav{
+    height: 6rem;
+}
+
+.w-60 {  /* Custom width size for the navbar, paul idea */
+    width: 60%!important
+}

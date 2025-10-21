@@ -2,21 +2,42 @@
 {% extends 'pages/base.html' %}
 {% load static %}
 {% block title %}Release Stress & Restore Balance With Shiatsu{% endblock %}
+
 {% block content %}
+  <section class="hero">
+    <div class="hero-media">
+      <img src="{% static 'img/hero1.jpg' %}"   class="hero-img hero-left"   alt="">
+      <img src="{% static 'img/hero2.jpg' %}" class="hero-img hero-center" alt="">
+      <img src="{% static 'img/hero3.jpg' %}"  class="hero-img hero-right"  alt="">
+    </div>
 
-<section class="hero">
-  <div class="hero-media">
-    <img src="{% static 'img/hero1.jpg' %}"   class="hero-img hero-left"   alt="">
-    <img src="{% static 'img/hero2.jpg' %}" class="hero-img hero-center" alt="">
-    <img src="{% static 'img/hero3.jpg' %}"  class="hero-img hero-right"  alt="">
-  </div>
+    <div class="hero-overlay"></div>
 
-  <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <h1 class="hero-title">Release Stress & Restore<br>Balance With Shiatsu</h1>
+    </div>
+  </section>
 
-  <div class="hero-inner">
-    <h1 class="hero-title">Release Stress & Restore<br>Balance With Shiatsu</h1>
-  </div>
-</section>
+  <!-- BIO / ABOUT -->
+  <section class="section section-bio" id="about">
+    <div class="container">
+      <div class="bio-wrap">
+        <figure class="bio-photo">
+          <img src="{% static 'img/shane-portrait.jpg' %}" alt="Shiatsu Shane portrait">
+        </figure>
 
+        <div class="bio-card">
+          <h2 class="bio-title">About Me</h2>
+          <p>
+            I have been studying the human body and different forms of massage for over 20 years. I
+            specialise in Shiatsu but combine East &amp; West techniques to get the best results…
+          </p>
+          <a href="{% url 'about' %}" class="btn btn-accent">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+<!-- SECTION SPACER BAND -->
+<div class="section-spacer" aria-hidden="true"></div>
 {% endblock %}
