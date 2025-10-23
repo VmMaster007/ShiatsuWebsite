@@ -3,20 +3,23 @@
     <nav class="navbar navbar-expand-lg navbar-dark position-fixed rounded-pill bg-primary sticky-top w-60 mx-auto mt-7 w-5">
     <div class="container-fluid h-100">
     <img src="{% static 'img/logo.svg' %}" class="h-100" alt="">
-        <h1 class="title">Shiatsu Shane</h1>
+        <h1 class="title" style="padding-left: 0.25em;">Shiatsu Shane</h1>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
         <ul class="navbar-nav  mx-auto">
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-link active" aria-current="page" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Courses</a>
             </li>
         </ul>
         </div>

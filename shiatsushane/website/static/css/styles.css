@@ -5,11 +5,6 @@ nav{
     height: 6rem;
 }
 
-title{
-    text-align: right;
-}
-
-
 /* Custom Bootstrap Classes */
 .w-60 {  /* Custom width size for the navbar, paul idea */
     width: 60%!important;
@@ -22,5 +17,5 @@ title{
 /* ########## TopBar ########## */
 .topbar{
     height: 70px;
-    padding-top: 1em;
+    padding-top: 1em; /* center text vertically */
 }

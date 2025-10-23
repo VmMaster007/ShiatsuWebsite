@@ -1,29 +1,43 @@
 {% load crispy_forms_tags %}
+{% load static %}
 {% block content %}
-<div class="container-fluid topbar bg-primary text-white w-100">
-   <div class="row justify-content-center align-items-center">
-        <div class="col-4 align-self-center">
-        <span aria-hidden="true" class="my-auto">🕒</span>
-            <marquee width="60%" direction="right">
-                Open Mon–Fri | Book Online Anytime!
-            </marquee>
-        </div>
-        <div class="col-4 align-self-center">
-            <a class="text-light" href="/vouchers/">Give the gift of relaxation — Gift Vouchers available now!</a>
+<!-- Announcement Bar -->
+<nav class="topbar bg-primary d-flex align-items-center py-2" data-bs-theme="dark">
+  <div class="container-xl py-2 px-3 px-md-4 d-flex align-items-center gap-3">
+
+    <!-- Left -->
+    <div class="d-flex align-items-center gap-3">
+      <span class="rounded-circle d-inline-flex align-items-center justify-content-center"
+            style="width:44px;height:44px;" aria-hidden="true">
+        <img src="{% static 'img/alarm.svg' %}" alt="Alarm" class="img-fluid" style="width:24px;height:24px;" />
+      </span>
+      <marquee width="60%" direction="right" class="fw-semibold text-light">
+        Open Mon–Fri | Book Online Anytime!
+      </marquee>
+    </div>
+
+    <!-- Center -->
+    <div class="mx-auto text-center d-none d-md-block px-3">
+      <span class="fw-semibold text-light">Give the gift of relaxation — Gift Vouchers available now!</span>
+    </div>
+
+    <!-- Right -->
+    <div class="ms-auto">
         {% if user.is_authenticated %}
-            <span class="welcome-text">Welcome, {{ user.username }}!</span>
+            <span class="welcome-text text-light fw-semibold">Welcome, {{ user.username }}!</span>
             <span class="divider">|</span>
-            <a class="text-light"  href="{% url 'logout' %}">Logout</a>
+            <a class="text-light fw-semibold"  href="{% url 'logout' %}">Logout</a>
         {% else %}
         <div class="ms-5 inline-block d-inline">
-            <a  class="text-light" href="javascript:void(0)" onclick="show_modal('login')">Login</a>
-            <span class="divider">|</span>
-            <a class="text-light" href="javascript:void(0)" onclick="show_modal('register')">Register</a>
+            <a  class="text-light fw-semibold" href="javascript:void(0)" onclick="show_modal('login')">Login</a>
+            <span class="divider fw-semibold">|</span>
+            <a class="text-light fw-semibold" href="javascript:void(0)" onclick="show_modal('register')">Register</a>
         </div>
         {% endif %}
-        </div>
+    </div>
+
   </div>
-  </div>
+</nav>
 
 <!-- Modal Function To Show The Popup -->
 <script>
