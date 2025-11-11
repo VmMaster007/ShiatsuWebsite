@@ -26,26 +26,16 @@
         {% if user.is_authenticated %}
             <span class="welcome-text text-light fw-semibold">Welcome, {{ user.username }}!</span>
             <span class="divider">|</span>
-            <a class="text-light fw-semibold"  href="{% url 'logout' %}">Logout</a>
+            <a class="text-light fw-semibold btn" href="{% url 'logout' %}">Logout</a>
         {% else %}
         <div class="ms-5 inline-block d-inline">
-            <a  class="text-light fw-semibold" href="javascript:void(0)" onclick="show_modal('login')">Login</a>
+            <a class="text-light fw-semibold btn" data-bs-toggle="modal" data-bs-target="#login-modal">Login</a>
             <span class="divider fw-semibold">|</span>
-            <a class="text-light fw-semibold" href="javascript:void(0)" onclick="show_modal('register')">Register</a>
+            <a class="text-light fw-semibold btn" data-bs-toggle="modal" data-bs-target="#register-modal">Register</a>
         </div>
         {% endif %}
     </div>
 
   </div>
 </nav>
-
-<!-- Modal Function To Show The Popup -->
-<script>
-  function show_modal(which) {
-    console.log(which)
-    // which should be 'login' or 'register'
-    const modal = document.getElementById(`${which}-modal`);
-    if (modal) modal.style.display = "block";
-  }
-</script>
 {% endblock %}

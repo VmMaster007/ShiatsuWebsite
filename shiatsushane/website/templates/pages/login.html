@@ -2,12 +2,12 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <div id="login-modal" class="modal {{ login_display|default:'' }}">
-    <div class="pannel">
-        <div class="auth-page">
+    <div id="login-modal" class="modal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4">
         <div class="auth-card">
-            <a onclick="close_modal('login')" href="" class="close">Close</a>
-            <h2 class="auth-title">Login</h2>
+            <a href="" class="close float-end">Close</a>
+            <h2 class="auth-title text-center">Login</h2>
             <div class="auth-divider"></div>
 
             <form method="POST" autocomplete="off" class="auth-form">
