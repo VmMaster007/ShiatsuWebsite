@@ -16,24 +16,61 @@
       <h1 class="text-white">Shiatsu Shane Combining East & Western Techniques in a unique way to help balance your body & mind to ease your aches & Pains.</h1>
     </div>
 
-  <!-- BIO / ABOUT -->
-  <section class="section section-bio" id="about">
-    <div class="card mx-auto" style="max-width: 1000px;">
-      <div class="row">
-        <div class="col-8">
-          <img class="shane img-fluid rounded-4" src="{% static 'img/shane-portrait.jpg' %}" alt="Shiatsu Shane portrait">
-        </div>
-        <div class="card-body d-flex col-4 bg-danger">
-            <h2 class="bio-title">About Me</h2>
-            <p class="d-flex align-items-center fs-4">
-            I have been studying the human body and different forms of massage for over 20 years. I
-            specialise in Shiatsu but combine East &amp; West techniques to get the best results…
-            </p>
-          <a href="{% url 'about' %}" class="btn btn-accent">Read More</a>
+<!-- AI GENERATED: About section layout with overlapping image card -->
+<section id="about" class="py-5">
+  <div class="container">
+    <!-- Wrapper that constrains width and is the positioning context
+         for the absolutely-positioned photo card -->
+    <div class="position-relative mx-auto" style="max-width: 1100px;">
+
+      <!-- TEXT CARD (blue background, pushed to the right so the image can sit on the left) -->
+      <div class="card bg-primary border-0 rounded-4 w-75 ms-auto">
+        <!-- Inner padding: vertical + horizontal, with a bit more on md+ screens -->
+        <div class="card-body py-4 py-md-5 px-4 px-md-5">
+          <div class="row">
+            <!-- On md+ screens, text takes 9/12 columns and is shifted 3 columns right,
+                 so it never ends up underneath the overlapping image card -->
+            <div class="col-md-9 offset-md-3">
+              <h2 class="mb-3">About Me</h2>
+              <p class="fs-5 mb-4">
+                I have Been Studying the human body and different forms of massage for over 20 years, 
+                I specialized in shiatsu but I continue to study many forms of body work and blend them 
+                into my sessions in order to get you the best results.
+                I have worked for over 10 years full time in my own clinic and have become the local ‘go to guy’ 
+                for back pain, sciatica, shoulder issues and many more. I have had the fortune to work with hundreds 
+                of clients from various backgrounds including many professional sports men and women.
+              </p>
+              <!-- Align the button to the right on md+ screens -->
+              <div class="text-md-end">
+                <!-- AI GENERATED: Bootstrap-only outline pill button -->
+                <a
+                  href="{% url 'about' %}"
+                  class="btn btn-outline-light rounded-pill px-4 py-2 border-2 shadow-sm d-inline-flex align-items-center gap-2"
+                >
+                  <span>Read More</span>
+                  <span>&rarr;</span>  <!-- remove if you don't want the arrow -->
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- IMAGE CARD (floats on the left, overlapping the text card slightly) -->
+      <div
+        class="bio-photo-card position-absolute top-50 start-0 translate-middle-y rounded-4 overflow-hidden shadow"
+      >
+        <!-- Photo itself; src uses Django's static tag -->
+        <img
+          src="{% static 'img/shane-portrait.jpg' %}"
+          alt="Shiatsu Shane portrait"
+        >
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+<!-- End Of AI -->
 
 <!-- SECTION SPACER BAND -->
 <div class="section-spacer" aria-hidden="true"></div>

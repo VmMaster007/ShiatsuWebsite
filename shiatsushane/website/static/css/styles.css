@@ -28,3 +28,32 @@ nav{
     height: 450px;
     width: 100%;    
 }
+
+/* AI GENERATED: Styles for About section overlapping image layout */
+
+/* Base positioning / size for the floating image card on the left */
+.bio-photo-card {
+  width: 40%;          /* Image card is 40% of the wrapper width (adjust for more/less overlap) */
+  max-width: 420px;    /* Prevent it from getting too large on very wide screens */
+  z-index: 2;          /* Ensure the image card sits above the blue text card */
+}
+
+/* Make the image fill its card cleanly */
+.bio-photo-card img {
+  width: 100%;         /* Image stretches to the card width */
+  height: auto;        /* Keep the aspect ratio */
+  display: block;      /* Remove inline-block gap under the image */
+}
+
+/* On small screens, disable the overlap and stack the image above the text card */
+@media (max-width: 767.98px) {
+  .bio-photo-card {
+    position: static !important;     /* Back to normal document flow */
+    transform: none !important;      /* Remove vertical centering transform */
+    width: 100% !important;          /* Full width on mobile */
+    max-width: none !important;      /* Let it fill the container */
+    margin-bottom: 1.5rem;           /* Space between image and blue card */
+  }
+}
+
+/* End of AI */
