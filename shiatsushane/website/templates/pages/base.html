@@ -12,10 +12,9 @@
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 {% block head_extra %}{% endblock %}
 </head>
-<body class="bg-body">
+<body class="bg-body" onscroll="sticky()">
 {% include 'components/topbar.html' %}
-{% include 'components/navbar.html' %}
-
+   {% include 'components/navbar.html' %}
 {% block content %}
 {% endblock %}
 
