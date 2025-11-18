@@ -11,27 +11,27 @@
             style="width:44px;height:44px;" aria-hidden="true">
         <img src="{% static 'img/alarm.svg' %}" alt="Alarm" class="img-fluid" style="width:24px;height:24px;" />
       </span>
-      <marquee width="60%" direction="right" class="fw-semibold text-light">
+      <marquee width="60%" direction="right" class="fw-semibold text-dark">
         Open Mon–Fri | Book Online Anytime!
       </marquee>
     </div>
 
     <!-- Center -->
     <div class="mx-auto text-center d-none d-md-block px-3">
-      <span class="fw-semibold text-light">Give the gift of relaxation — Gift Vouchers available now!</span>
+      <span class="fw-semibold text-dark">Give the gift of relaxation — Gift Vouchers available now!</span>
     </div>
 
     <!-- Right -->
     <div class="ms-auto">
         {% if user.is_authenticated %}
-            <span class="welcome-text text-light fw-semibold">Welcome, {{ user.username }}!</span>
+            <span class="welcome-text text-dark fw-semibold">Welcome, {{ user.username }}!</span>
             <span class="divider">|</span>
-            <a class="text-light fw-semibold btn" href="{% url 'logout' %}">Logout</a>
+            <a class="fw-semibold btn text-dark" href="{% url 'logout' %}">Logout</a>
         {% else %}
         <div class="ms-5 inline-block d-inline">
-            <a class="text-light fw-semibold btn" data-bs-toggle="modal" data-bs-target="#login-modal">Login</a>
+            <a class="fw-semibold btn text-dark" data-bs-toggle="modal" data-bs-target="#login-modal">Login</a>
             <span class="divider fw-semibold">|</span>
-            <a class="text-light fw-semibold btn" data-bs-toggle="modal" data-bs-target="#register-modal">Register</a>
+            <a class="fw-semibold btn text-dark" data-bs-toggle="modal" data-bs-target="#register-modal">Register</a>
         </div>
         {% endif %}
     </div>

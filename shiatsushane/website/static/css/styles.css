@@ -1,5 +1,14 @@
 /* ########## CSS FOR WEBSITE ##########*/
 
+@font-face {
+  font-family: PlayFair;
+  src: url("../fonts/PlayfairDisplay-Bold.ttf");
+}
+
+*{
+  font-family: PlayFair;
+}
+
 /* ########## NavBar ########## */
 nav{
     height: 6rem;
@@ -22,10 +31,9 @@ nav{
 
 .hero-media{
     background-image: url("../img/ss.png");
-    /* background-size: cover; */
+    background-size: cover; 
     background-position: center;
-    /* height: 85vh; */
-    height: 450px;
+    height: 55vh;
     width: 100%;    
 }
 
@@ -33,9 +41,10 @@ nav{
 
 /* Base positioning / size for the floating image card on the left */
 .bio-photo-card {
-  width: 40%;          /* Image card is 40% of the wrapper width (adjust for more/less overlap) */
-  max-width: 420px;    /* Prevent it from getting too large on very wide screens */
-  z-index: 2;          /* Ensure the image card sits above the blue text card */
+  width: 105%;          /* Image card is 40% of the wrapper width (adjust for more/less overlap) */
+  height: 80%;
+  max-width: 600px;    /* Prevent it from getting too large on very wide screens */
+  z-index: 2;          /* Ensure the image card sits above the green text card */
 }
 
 /* Make the image fill its card cleanly */
@@ -57,3 +66,7 @@ nav{
 }
 
 /* End of AI */
+
+.card{
+  width: 60%;
+}

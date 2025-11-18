@@ -5,15 +5,16 @@
 
 {% block content %}
     <div class="hero-media">
-      <div class="d-flex container justify-content-center align-items-center h-100">
-        <h1 class="text-white text-center">
+      <div class="d-flex container justify-content-center align-items-center h-100" >
+        <h1 class="text-white text-center pt-5" style="opacity: 0.75;">
           Release Stress & Restore<br>Balance With Shiatsu
         </h1>
       </div>
     </div>
 
     <div class="Divider1 bg-primary text-center py-3">
-      <h1 class="text-white">Shiatsu Shane Combining East & Western Techniques in a unique way to help balance your body & mind to ease your aches & Pains.</h1>
+      <h1 class="text-dark" style="font-size: 2em;">Shiatsu Shane Combining East & Western Techniques
+         in a unique way <br> to help balance your body & mind to ease your aches & Pains.</h1>
     </div>
 
 <!-- AI GENERATED: About section layout with overlapping image card -->
@@ -21,17 +22,17 @@
   <div class="container">
     <!-- Wrapper that constrains width and is the positioning context
          for the absolutely-positioned photo card -->
-    <div class="position-relative mx-auto" style="max-width: 1100px;">
+    <div class="position-relative d-flex mx-auto">
 
       <!-- TEXT CARD (blue background, pushed to the right so the image can sit on the left) -->
-      <div class="card bg-primary border-0 rounded-4 w-75 ms-auto">
+      <div class="card bg-primary border-0 flex-end rounded-4 ms-auto">
         <!-- Inner padding: vertical + horizontal, with a bit more on md+ screens -->
         <div class="card-body py-4 py-md-5 px-4 px-md-5">
           <div class="row">
             <!-- On md+ screens, text takes 9/12 columns and is shifted 3 columns right,
                  so it never ends up underneath the overlapping image card -->
-            <div class="col-md-9 offset-md-3">
-              <h2 class="mb-3">About Me</h2>
+            <div class="col-md-11 offset-md-1">
+              <h2 class="mb-3 text-dark">About Me</h2>
               <p class="fs-5 mb-4">
                 I have Been Studying the human body and different forms of massage for over 20 years, 
                 I specialized in shiatsu but I continue to study many forms of body work and blend them 
@@ -64,6 +65,7 @@
         <img
           src="{% static 'img/shane-portrait.jpg' %}"
           alt="Shiatsu Shane portrait"
+          style="height: 100%; width: 100%;"
         >
       </div>
 
@@ -72,6 +74,8 @@
 </section>
 <!-- End Of AI -->
 
+    <div class="Divider1 bg-primary text-center py-3"></div>
+
 <!-- SECTION SPACER BAND -->
 <div class="section-spacer" aria-hidden="true"></div>
-{% endblock %}
+{% endblock %} 

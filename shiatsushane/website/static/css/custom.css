@@ -1,0 +1,36 @@
+:root {
+    /* TRANSLATION OF $primary */
+    --bs-primary: #7D9B87; 
+    --bs-primary-rgb: 125, 155, 135; /* Must Calculate This */
+    /* brighter green */
+
+    /* TRANSLATION OF $secondary */
+    --bs-secondary: #2A3A33;
+    --bs-secondary-rgb: 42, 58, 51; /* Must Calculate This */
+    /* deeper green */
+
+    /* TRANSLATION OF $body */
+    --bs-body: #FFE8D6;
+    --bs-body-rgb: 255, 232, 214; /* Must Calculate This */
+    /* paper color / background */
+
+    /* TRANSLATION OF $text-dark */
+    --bs-dark: #26322C;
+    --bs-dark-rgb: 38, 50, 44; /* Must Calculate This */
+    /* inky text */
+    
+    /* TRANSLATION OF $muted */
+    --bs-muted: #6A736E;
+    --bs-muted-rgb: 106, 115, 110; /* Must Calculate This */
+    /* muted color */
+
+    /* TRANSLATION OF $warning */
+    --bs-warning: #5E7E6C;
+    --bs-warning-rgb: 94, 126, 108; /* Must Calculate This */
+    /* color for hovering over objects */
+
+    /* TRANSLATION OF $info */
+    --bs-info: #0B1712;
+    --bs-info-rgb: 11, 23, 18; /* Must Calculate This */
+    /* very dark footer */
+}
